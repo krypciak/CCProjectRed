@@ -21,12 +21,8 @@ sc.NewGameModeSelectDialog.inject({
   init(callback) {
     this.parent(callback);
 
-    ig.lang.labels.sc.gui.menu['new-game'].dialogs.explore = 'Explore';
-    ig.lang.labels.sc.gui.menu['new-game'].dialogs.exploreDescription =
-      'Explore the world of Shadoon.';
-
     this.explore = new sc.NewGameModeDialogButton(
-      ig.lang.get('sc.gui.menu.new-game.dialogs.explore'),
+      ig.lang.get('sc.gui.menu.new-game.dialogs.project-red'),
       2,
     );
     this.explore.setAlign(ig.GUI_ALIGN.X_CENTER, ig.GUI_ALIGN.Y_TOP);
@@ -50,7 +46,7 @@ sc.NewGameModeSelectDialog.inject({
       if (!(info instanceof sc.ButtonGui)) return;
       if (info.data === 2) {
         this.info.doStateTransition('DEFAULT', true);
-        this.info.setText(ig.lang.get('sc.gui.menu.new-game.dialogs.exploreDescription'));
+        this.info.setText(ig.lang.get('sc.gui.menu.new-game.dialogs.project-red-description'));
       }
     });
     this.buttongroup.addPressCallback((info) => {
