@@ -1,4 +1,21 @@
 import '../ui/submenu.js';
+
+sc.NewGameModeDialogButton.inject({
+  alyGfx: new ig.Image('media/gui/new-game-aly.png'),
+  init(title, data) {
+    // Just let it do its thing...
+    this.parent(title, data);
+
+    if (this.data === 2) {
+      // Any better way to do it than this?
+      this.removeChildGui(this.image);
+      this.image = new ig.ImageGui(this.alyGfx, 0, 0, 110, 90);
+      this.image.setPos(5, 19);
+      this.addChildGui(this.image);
+    }
+  },
+});
+
 sc.NewGameModeSelectDialog.inject({
   explore: null,
   init(callback) {
@@ -10,7 +27,7 @@ sc.NewGameModeSelectDialog.inject({
 
     this.explore = new sc.NewGameModeDialogButton(
       ig.lang.get('sc.gui.menu.new-game.dialogs.explore'),
-      1,
+      2,
     );
     this.explore.setAlign(ig.GUI_ALIGN.X_CENTER, ig.GUI_ALIGN.Y_TOP);
     this.explore.setPos(0, 27);

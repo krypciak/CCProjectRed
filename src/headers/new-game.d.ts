@@ -4,6 +4,8 @@ declare global {
   namespace sc {
     interface NewGameModeDialogButton extends ig.FocusGui {
       data: number;
+      alyGfx: ig.Image;
+      image: ig.ImageGui;
     }
     interface NewGameModeDialogButtonConstructor extends ImpactClass<NewGameModeDialogButton> {
       new (title: string, data: number): NewGameModeDialogButton;
