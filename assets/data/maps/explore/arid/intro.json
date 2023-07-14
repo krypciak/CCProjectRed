@@ -206,6 +206,64 @@
             "type": "SHOW_MSG"
           },
           {
+            "person": {
+              "person": "main.genius",
+              "expression": "DOWN"
+            },
+            "message": {
+              "en_US": "What?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "SERIOUS"
+            },
+            "message": {
+              "en_US": "...what do you mean?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "ASKING"
+            },
+            "message": {
+              "en_US": "They are planning for an official release?!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "SERIOUS"
+            },
+            "message": {
+              "en_US": "Okay."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "SERIOUS"
+            },
+            "message": {
+              "en_US": "Thank you."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
             "type": "PLAY_SOUND",
             "position": {
               "x": 1,
@@ -215,6 +273,38 @@
             "volume": 1,
             "loop": false,
             "name": ""
+          },
+          {
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "EXHAUSTED"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "EXHAUSTED"
+            },
+            "message": {
+              "en_US": "Well..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "DRAMATIC"
+            },
+            "message": {
+              "en_US": "I guess it could not have been prevented."
+            },
+            "type": "SHOW_MSG"
           },
           {
             "type": "CLEAR_MSG",
@@ -255,14 +345,193 @@
             "time": 0.5
           },
           {
+            "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.projred.line",
+            "changeType": "set",
+            "value": 100
+          },
+          {
             "type": "TELEPORT",
-            "map": "explore.arid.entrance"
+            "map": "evo-village.interior.lea"
           }
         ],
         "eventType": "CUTSCENE",
         "endCondition": "false",
         "triggerType": "ONCE_PER_ENTRY",
         "name": "intro"
+      }
+    },
+    {
+      "type": "Marker",
+      "x": 351,
+      "y": 385,
+      "level": 0,
+      "settings": {
+        "mapId": 25,
+        "name": "start",
+        "dir": "SOUTH"
+      }
+    },
+    {
+      "type": "EventTrigger",
+      "x": 450,
+      "y": 175,
+      "level": 0,
+      "settings": {
+        "mapId": 26,
+        "event": [
+          {
+            "type": "SHOW_EFFECT",
+            "entity": {
+              "global": true,
+              "name": "light"
+            },
+            "effect": {
+              "sheet": "scene.dream",
+              "name": "darknessPoint"
+            },
+            "duration": -1,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "align": "BOTTOM",
+            "waitSkip": 0
+          }
+        ],
+        "eventType": "PARALLEL",
+        "endCondition": "false",
+        "triggerType": "ONCE_PER_ENTRY",
+        "name": "fx"
+      }
+    },
+    {
+      "type": "Note",
+      "x": 426,
+      "y": 157,
+      "level": 0,
+      "settings": {
+        "mapId": 27,
+        "size": {
+          "x": 64,
+          "y": 15
+        },
+        "name": "Persistent events"
+      }
+    },
+    {
+      "type": "Note",
+      "x": 506,
+      "y": 157,
+      "level": 0,
+      "settings": {
+        "mapId": 28,
+        "size": {
+          "x": 41,
+          "y": 15
+        },
+        "name": "Cutscenes"
+      }
+    },
+    {
+      "type": "ObjectLayerView",
+      "x": 400,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 29,
+        "size": {
+          "x": 16,
+          "y": 32
+        },
+        "layer": "object1",
+        "collType": "BLOCK",
+        "zHeight": 16,
+        "terrain": "",
+        "heightShape": "NONE",
+        "spawnCondition": "",
+        "hideCondition": ""
+      }
+    },
+    {
+      "type": "ObjectLayerView",
+      "x": 320,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 30,
+        "size": {
+          "x": 16,
+          "y": 32
+        },
+        "layer": "object1",
+        "collType": "BLOCK",
+        "zHeight": 16,
+        "terrain": "",
+        "heightShape": "NONE",
+        "spawnCondition": "",
+        "hideCondition": ""
+      }
+    },
+    {
+      "type": "ObjectLayerView",
+      "x": 448,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 31,
+        "size": {
+          "x": 16,
+          "y": 48
+        },
+        "layer": "object1",
+        "collType": "BLOCK",
+        "zHeight": 10,
+        "terrain": "",
+        "heightShape": "NONE",
+        "spawnCondition": "",
+        "hideCondition": ""
+      }
+    },
+    {
+      "type": "ObjectLayerView",
+      "x": 272,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 32,
+        "size": {
+          "x": 16,
+          "y": 48
+        },
+        "layer": "object1",
+        "collType": "BLOCK",
+        "zHeight": 10,
+        "terrain": "",
+        "heightShape": "NONE",
+        "spawnCondition": "",
+        "hideCondition": ""
+      }
+    },
+    {
+      "type": "ObjectLayerView",
+      "x": 336,
+      "y": 320,
+      "level": 0,
+      "settings": {
+        "mapId": 33,
+        "size": {
+          "x": 64,
+          "y": 16
+        },
+        "layer": "object1",
+        "collType": "BLOCK",
+        "zHeight": 16,
+        "terrain": "",
+        "heightShape": "NONE",
+        "spawnCondition": "",
+        "hideCondition": ""
       }
     },
     {
@@ -443,6 +712,28 @@
       }
     },
     {
+      "type": "NPC",
+      "x": 357,
+      "y": 333,
+      "level": 0,
+      "settings": {
+        "mapId": 7,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "NORTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "main.genius",
+        "name": "genius"
+      }
+    },
+    {
       "type": "Prop",
       "x": 346,
       "y": 322,
@@ -478,201 +769,6 @@
         "propAnim": "default",
         "condAnims": [],
         "name": "B"
-      }
-    },
-    {
-      "type": "NPC",
-      "x": 357,
-      "y": 333,
-      "level": 0,
-      "settings": {
-        "mapId": 7,
-        "npcStates": [
-          {
-            "reactType": "FIXED_FACE",
-            "face": "NORTH",
-            "action": [],
-            "hidden": false,
-            "condition": "",
-            "config": "normal",
-            "event": []
-          }
-        ],
-        "characterName": "main.genius",
-        "name": "genius"
-      }
-    },
-    {
-      "type": "Marker",
-      "x": 351,
-      "y": 385,
-      "level": 0,
-      "settings": {
-        "mapId": 25,
-        "name": "start",
-        "dir": "SOUTH"
-      }
-    },
-    {
-      "type": "EventTrigger",
-      "x": 450,
-      "y": 175,
-      "level": 0,
-      "settings": {
-        "mapId": 26,
-        "event": [
-          {
-            "type": "SHOW_EFFECT",
-            "entity": {
-              "global": true,
-              "name": "light"
-            },
-            "effect": {
-              "sheet": "scene.dream",
-              "name": "darknessPoint"
-            },
-            "duration": -1,
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "align": "BOTTOM",
-            "waitSkip": 0
-          }
-        ],
-        "eventType": "PARALLEL",
-        "endCondition": "false",
-        "triggerType": "ONCE_PER_ENTRY",
-        "name": "fx"
-      }
-    },
-    {
-      "type": "Note",
-      "x": 426,
-      "y": 157,
-      "level": 0,
-      "settings": {
-        "mapId": 27,
-        "size": {
-          "x": 64,
-          "y": 15
-        },
-        "name": "Persistent events"
-      }
-    },
-    {
-      "type": "Note",
-      "x": 506,
-      "y": 157,
-      "level": 0,
-      "settings": {
-        "mapId": 28,
-        "size": {
-          "x": 41,
-          "y": 15
-        },
-        "name": "Cutscenes"
-      }
-    },
-    {
-      "type": "ObjectLayerView",
-      "x": 400,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 29,
-        "size": {
-          "x": 16,
-          "y": 32
-        },
-        "layer": "object1",
-        "collType": "BLOCK",
-        "zHeight": 16,
-        "terrain": "",
-        "heightShape": "NONE",
-        "spawnCondition": "",
-        "hideCondition": ""
-      }
-    },
-    {
-      "type": "ObjectLayerView",
-      "x": 320,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 30,
-        "size": {
-          "x": 16,
-          "y": 32
-        },
-        "layer": "object1",
-        "collType": "BLOCK",
-        "zHeight": 16,
-        "terrain": "",
-        "heightShape": "NONE",
-        "spawnCondition": "",
-        "hideCondition": ""
-      }
-    },
-    {
-      "type": "ObjectLayerView",
-      "x": 448,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 31,
-        "size": {
-          "x": 16,
-          "y": 48
-        },
-        "layer": "object1",
-        "collType": "BLOCK",
-        "zHeight": 10,
-        "terrain": "",
-        "heightShape": "NONE",
-        "spawnCondition": "",
-        "hideCondition": ""
-      }
-    },
-    {
-      "type": "ObjectLayerView",
-      "x": 272,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 32,
-        "size": {
-          "x": 16,
-          "y": 48
-        },
-        "layer": "object1",
-        "collType": "BLOCK",
-        "zHeight": 10,
-        "terrain": "",
-        "heightShape": "NONE",
-        "spawnCondition": "",
-        "hideCondition": ""
-      }
-    },
-    {
-      "type": "ObjectLayerView",
-      "x": 336,
-      "y": 320,
-      "level": 0,
-      "settings": {
-        "mapId": 33,
-        "size": {
-          "x": 64,
-          "y": 16
-        },
-        "layer": "object1",
-        "collType": "BLOCK",
-        "zHeight": 16,
-        "terrain": "",
-        "heightShape": "NONE",
-        "spawnCondition": "",
-        "hideCondition": ""
       }
     }
   ],
@@ -1439,9 +1535,9 @@
           0,
           0,
           12,
-          38,
-          39,
-          39,
+          1,
+          1,
+          1,
           39,
           39,
           39,
