@@ -13,13 +13,12 @@
             "x": 621,
             "y": 399,
             "level": 0,
-            "name": "exploreWake1",
-            "eventType": "CUTSCENE",
-            "spawnCondition": "true",
-            "startCondition": "true",
-            "endCondition": "plot.projred.line >= 200",
-            "triggerType": "ALWAYS",
             "settings": {
+                "name": "projredWake1",
+                "eventType": "CUTSCENE",
+                "startCondition": "plot.projred.line <= 100",
+                "endCondition": "plot.projred.line >= 200",
+                "triggerType": "ALWAYS",
                 "mapId": 3225427,
                 "event": [
                     {
@@ -188,6 +187,10 @@
                         "type": "DO_ACTION",
                         "wait": true,
                         "keepState": true
+                    },
+                    {
+                        "type": "WAIT",
+                        "time": 4.5
                     }
                 ]
             }
