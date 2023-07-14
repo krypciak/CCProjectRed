@@ -22,6 +22,7 @@ declare global {
       };
 
       callback: (data: { data: number }, _this: NewGameModeSelectDialog) => void;
+      checkPostDlcSaveFiles(): boolean;
     }
     interface NewGameModeSelectDialogConstructor extends ImpactClass<NewGameModeSelectDialog> {
       new (

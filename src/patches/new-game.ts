@@ -21,6 +21,12 @@ sc.NewGameModeSelectDialog.inject({
   init(callback) {
     this.parent(callback);
 
+    if (!this.checkPostDlcSaveFiles()) return;
+
+    ig.lang.labels.sc.gui.menu['new-game'].dialogs.explore = 'Explore';
+    ig.lang.labels.sc.gui.menu['new-game'].dialogs.exploreDescription =
+      'Explore the world of Shadoon.';
+
     this.explore = new sc.NewGameModeDialogButton(
       ig.lang.get('sc.gui.menu.new-game.dialogs.project-red'),
       2,
@@ -57,5 +63,15 @@ sc.NewGameModeSelectDialog.inject({
         sc.model.enterMenu(true);
       }
     });
+  },
+
+  checkPostDlcSaveFiles() {
+    for (let slot of ig.storage.slots) {
+      let data = slot.getData();
+      if (data.stats?.combat?.['killboss.shady'] >= 1) {
+        return true;
+      }
+    }
+    return false;
   },
 });
