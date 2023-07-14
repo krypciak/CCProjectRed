@@ -1,0 +1,196 @@
+[
+    {
+        "type": "ENTER",
+        "index": [
+            "entities"
+        ]
+    },
+    {
+        "type": "ADD_ARRAY_ELEMENT",
+        "index": 1,
+        "content": {
+            "type": "EventTrigger",
+            "x": 621,
+            "y": 399,
+            "level": 0,
+            "name": "exploreWake1",
+            "eventType": "CUTSCENE",
+            "spawnCondition": "true",
+            "startCondition": "true",
+            "endCondition": "plot.projred.line >= 200",
+            "triggerType": "ALWAYS",
+            "settings": {
+                "mapId": 3225427,
+                "event": [
+                    {
+                        "type": "SET_MOBILITY_BLOCK",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "PAUSE_BGM",
+                        "mode": "IMMEDIATELY"
+                    },
+                    {
+                        "overMessage": false,
+                        "type": "SET_OVERLAY",
+                        "alpha": 1,
+                        "time": 0,
+                        "color": "black"
+                    },
+                    {
+                        "pos": {
+                            "x": 452,
+                            "y": 460
+                        },
+                        "speed": "IMMEDIATELY",
+                        "transition": "EASE_IN_OUT",
+                        "type": "SET_CAMERA_POS",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 3
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "type": "SET_SHADOW",
+                                "size": 0
+                            },
+                            {
+                                "type": "SET_POS",
+                                "newPos": {
+                                    "x": 454,
+                                    "y": 484,
+                                    "lvl": "0"
+                                }
+                            },
+                            {
+                                "type": "SET_SLIP_THROUGH",
+                                "value": true
+                            },
+                            {
+                                "type": "SET_FACE",
+                                "face": "EAST",
+                                "rotateSpeed": 3
+                            },
+                            {
+                                "type": "SHOW_EXTERN_ANIM",
+                                "anim": {
+                                    "sheet": "player-sleeping",
+                                    "name": "inBed"
+                                }
+                            }
+                        ],
+                        "type": "DO_ACTION",
+                        "keepState": true
+                    },
+                    {
+                        "type": "SET_ZOOM_BLUR",
+                        "zoomType": "LIGHT",
+                        "fadeIn": 0,
+                        "duration": 4,
+                        "fadeOut": 1
+                    },
+                    {
+                        "overMessage": false,
+                        "type": "SET_OVERLAY",
+                        "color": "white",
+                        "alpha": 1,
+                        "time": 0.5,
+                        "lighter": false
+                    },
+                    {
+                        "type": "WAIT",
+                        "time": 0.5
+                    },
+                    {
+                        "zoom": 1,
+                        "transition": "EASE_OUT",
+                        "type": "SET_CAMERA_ZOOM",
+                        "duration": 4
+                    },
+                    {
+                        "overMessage": false,
+                        "type": "SET_OVERLAY",
+                        "color": "white",
+                        "alpha": 0,
+                        "time": 3
+                    },
+                    {
+                        "type": "SHOW_AR_MSG",
+                        "entity": {
+                            "player": true
+                        },
+                        "text": {
+                            "en_US": "Initializing avatar",
+                            "de_DE": "",
+                            "ja_JP": "",
+                            "ko_KR": "",
+                            "zh_CN": "",
+                            "zh_TW": ""
+                        },
+                        "time": 4,
+                        "mode": "LINE_FILL",
+                        "color": "GREEN"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "type": "SHOW_EFFECT",
+                                "rotOffset": {
+                                    "x": 1,
+                                    "y": 1
+                                },
+                                "effect": {
+                                    "sheet": "teleport",
+                                    "name": "showSlowBed"
+                                },
+                                "offset": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "duration": 0,
+                                "align": "BOTTOM",
+                                "wait": true,
+                                "actionDetached": true,
+                                "spriteFilter": [
+                                    1
+                                ]
+                            }
+                        ],
+                        "type": "DO_ACTION",
+                        "keepState": true,
+                        "wait": false
+                    },
+                    {
+                        "type": "WAIT",
+                        "time": 4.5
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "type": "SHOW_EXTERN_ANIM",
+                                "anim": {
+                                    "sheet": "player-sleeping",
+                                    "name": "wakeUp"
+                                }
+                            }
+                        ],
+                        "type": "DO_ACTION",
+                        "wait": true,
+                        "keepState": true
+                    }
+                ]
+            }
+        }
+    }
+]
