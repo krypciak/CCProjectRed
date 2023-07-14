@@ -1,8 +1,18 @@
 import '../ui/submenu.js';
+
+sc.TitleScreenButtonGui.inject({
+  // @ts-expect-error eee
+  checkClearSaveFiles() {
+    return true;
+  },
+});
+
 sc.NewGameModeSelectDialog.inject({
   explore: null,
   init(callback) {
     this.parent(callback);
+
+    if (!this.checkPostDlcSaveFiles()) return;
 
     ig.lang.labels.sc.gui.menu['new-game'].dialogs.explore = 'Explore';
     ig.lang.labels.sc.gui.menu['new-game'].dialogs.exploreDescription =
@@ -44,5 +54,15 @@ sc.NewGameModeSelectDialog.inject({
         sc.model.enterMenu(true);
       }
     });
+  },
+
+  checkPostDlcSaveFiles() {
+    for (let slot of ig.storage.slots) {
+      let data = slot.getData();
+      if (data.stats?.combat?.['killboss.shady'] >= 1) {
+        return true;
+      }
+    }
+    return false;
   },
 });
