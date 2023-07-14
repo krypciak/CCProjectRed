@@ -346,6 +346,18 @@
           },
           {
             "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.version",
+            "changeType": "set",
+            "value": 5
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.line",
+            "changeType": "set",
+            "value": 52000
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
             "varName": "plot.projred.line",
             "changeType": "set",
             "value": 100
@@ -712,28 +724,6 @@
       }
     },
     {
-      "type": "NPC",
-      "x": 357,
-      "y": 333,
-      "level": 0,
-      "settings": {
-        "mapId": 7,
-        "npcStates": [
-          {
-            "reactType": "FIXED_FACE",
-            "face": "NORTH",
-            "action": [],
-            "hidden": false,
-            "condition": "",
-            "config": "normal",
-            "event": []
-          }
-        ],
-        "characterName": "main.genius",
-        "name": "genius"
-      }
-    },
-    {
       "type": "Prop",
       "x": 346,
       "y": 322,
@@ -769,6 +759,28 @@
         "propAnim": "default",
         "condAnims": [],
         "name": "B"
+      }
+    },
+    {
+      "type": "NPC",
+      "x": 357,
+      "y": 333,
+      "level": 0,
+      "settings": {
+        "mapId": 7,
+        "npcStates": [
+          {
+            "reactType": "FIXED_FACE",
+            "face": "NORTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": []
+          }
+        ],
+        "characterName": "main.genius",
+        "name": "genius"
       }
     }
   ],
