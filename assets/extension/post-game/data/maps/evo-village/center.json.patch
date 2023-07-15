@@ -1,0 +1,85 @@
+[
+  {
+    "type": "ENTER",
+    "index": [
+      "entities",
+      4,
+      "settings"
+    ]
+  },
+  {
+    "type": "SET_KEY",
+    "index": "blockEventCondition",
+    "content": "plot.line < 41300 || plot.projred.line <= 200"
+  },
+  {
+    "type": "ENTER",
+    "index": [
+      "blockEvent"
+    ]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+      "type": "LABEL",
+      "name": "SKIP_VANILLA_BLOCK"
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 0,
+    "content": {
+      "withElse": false,
+      "type": "IF",
+      "condition": "plot.projred.line <= 200",
+      "thenStep": [
+        {
+          "type": "ADD_MSG_PERSON",
+          "person": {
+            "person": "main.sergey",
+            "expression": "NOTIFYING"
+          },
+          "side": "LEFT",
+          "order": 0,
+          "clearSide": false
+        },
+        {
+          "type": "ADD_MSG_PERSON",
+          "person": {
+            "person": "main.lea",
+            "expression": "SURPRISED_TOWARD"
+          },
+          "side": "RIGHT",
+          "order": 0,
+          "clearSide": false
+        },
+        {
+          "type": "SHOW_MSG",
+          "person": {
+            "person": "main.sergey",
+            "expression": "NOTIFYING"
+          },
+          "message": {
+            "en_US": "Lea, I think Satoshi really wants to talk to you. It is best you go see him now.",
+            "langUid": 3721983279,
+            "zh_TW": "",
+            "ko_KR": "",
+            "ja_JP": "",
+            "zh_CN": "",
+            "de_DE": ""
+          },
+          "autoContinue": false
+        },
+        {
+          "type": "CLEAR_MSG",
+          "side": "ALL"
+        },
+        {
+          "name": "SKIP_VANILLA_BLOCK",
+          "type": "GOTO_LABEL"
+        }
+      ]
+    }
+  }
+]
