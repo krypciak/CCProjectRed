@@ -75,5 +75,18 @@
         }
       ]
     }
+  },
+  {
+    "type": "EXIT",
+    "count": 3
+  },
+  {
+    "type": "ENTER",
+    "index": [46, "settings"]
+  },
+  {
+    "type": "SET_KEY",
+    "index": "blockEventCondition",
+    "content": "plot.line >= 48500 && !plot.projred.line >= 100"
   }
 ]
