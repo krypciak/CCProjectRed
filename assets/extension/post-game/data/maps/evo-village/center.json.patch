@@ -1,11 +1,7 @@
 [
   {
     "type": "ENTER",
-    "index": [
-      "entities",
-      4,
-      "settings"
-    ]
+    "index": ["entities", 4, "settings"]
   },
   {
     "type": "SET_KEY",
@@ -14,9 +10,7 @@
   },
   {
     "type": "ENTER",
-    "index": [
-      "blockEvent"
-    ]
+    "index": ["blockEvent"]
   },
   {
     "type": "ADD_ARRAY_ELEMENT",

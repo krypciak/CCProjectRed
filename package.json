@@ -15,6 +15,6 @@
     "build": "tsc --build",
     "watch": "tsc --build --watch",
     "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
-    "format": "prettier --write **/*.{ts,js}"
+    "format": "prettier --write **/*.{ts,js} && prettier --write --parser json **/*.{json,patch}"
   }
 }

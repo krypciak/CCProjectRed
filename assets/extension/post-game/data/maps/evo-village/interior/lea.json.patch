@@ -1,556 +1,552 @@
 [
-    {
-        "type": "ENTER",
-        "index": [
-            "entities"
-        ]
-    },
-    {
-        "type": "ADD_ARRAY_ELEMENT",
-        "index": 1,
-        "content": {
-            "type": "EventTrigger",
-            "x": 621,
-            "y": 399,
-            "level": 0,
-            "settings": {
-                "name": "projredWake1",
-                "eventType": "CUTSCENE",
-                "startCondition": "plot.projred.line <= 100",
-                "endCondition": "plot.projred.line >= 200",
-                "triggerType": "ALWAYS",
-                "mapId": 3225427,
-                "event": [
-                    {
-                        "type": "SET_MOBILITY_BLOCK",
-                        "value": "NONE"
-                    },
-                    {
-                        "type": "PAUSE_BGM",
-                        "mode": "IMMEDIATELY"
-                    },
-                    {
-                        "overMessage": false,
-                        "type": "SET_OVERLAY",
-                        "alpha": 1,
-                        "time": 0,
-                        "color": "black"
-                    },
-                    {
-                        "pos": {
-                            "x": 452,
-                            "y": 460
-                        },
-                        "speed": "IMMEDIATELY",
-                        "transition": "EASE_IN_OUT",
-                        "type": "SET_CAMERA_POS",
-                        "wait": true,
-                        "waitSkip": 0,
-                        "zoom": 3
-                    },
-                    {
-                        "entity": {
-                            "player": true
-                        },
-                        "action": [
-                            {
-                                "type": "SET_SHADOW",
-                                "size": 0
-                            },
-                            {
-                                "type": "SET_POS",
-                                "newPos": {
-                                    "x": 454,
-                                    "y": 484,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "SET_SLIP_THROUGH",
-                                "value": true
-                            },
-                            {
-                                "type": "SET_FACE",
-                                "face": "EAST",
-                                "rotateSpeed": 3
-                            },
-                            {
-                                "type": "SHOW_EXTERN_ANIM",
-                                "anim": {
-                                    "sheet": "player-sleeping",
-                                    "name": "inBed"
-                                }
-                            }
-                        ],
-                        "type": "DO_ACTION",
-                        "keepState": true
-                    },
-                    {
-                        "type": "SET_ZOOM_BLUR",
-                        "zoomType": "LIGHT",
-                        "fadeIn": 0,
-                        "duration": 4,
-                        "fadeOut": 1
-                    },
-                    {
-                        "overMessage": false,
-                        "type": "SET_OVERLAY",
-                        "color": "white",
-                        "alpha": 1,
-                        "time": 0.5,
-                        "lighter": false
-                    },
-                    {
-                        "type": "WAIT",
-                        "time": 0.5
-                    },
-                    {
-                        "zoom": 1,
-                        "transition": "EASE_OUT",
-                        "type": "SET_CAMERA_ZOOM",
-                        "duration": 4
-                    },
-                    {
-                        "overMessage": false,
-                        "type": "SET_OVERLAY",
-                        "color": "white",
-                        "alpha": 0,
-                        "time": 3
-                    },
-                    {
-                        "type": "SHOW_AR_MSG",
-                        "entity": {
-                            "player": true
-                        },
-                        "text": {
-                            "en_US": "Initializing avatar",
-                            "de_DE": "",
-                            "ja_JP": "",
-                            "ko_KR": "",
-                            "zh_CN": "",
-                            "zh_TW": ""
-                        },
-                        "time": 4,
-                        "mode": "LINE_FILL",
-                        "color": "GREEN"
-                    },
-                    {
-                        "entity": {
-                            "player": true
-                        },
-                        "action": [
-                            {
-                                "type": "SHOW_EFFECT",
-                                "rotOffset": {
-                                    "x": 1,
-                                    "y": 1
-                                },
-                                "effect": {
-                                    "sheet": "teleport",
-                                    "name": "showSlowBed"
-                                },
-                                "offset": {
-                                    "x": 0,
-                                    "y": 0,
-                                    "z": 0
-                                },
-                                "duration": 0,
-                                "align": "BOTTOM",
-                                "wait": true,
-                                "actionDetached": true,
-                                "spriteFilter": [
-                                    1
-                                ]
-                            }
-                        ],
-                        "type": "DO_ACTION",
-                        "keepState": true,
-                        "wait": false
-                    },
-                    {
-                        "type": "WAIT",
-                        "time": 4.5
-                    },
-                    {
-                        "entity": {
-                            "player": true
-                        },
-                        "action": [
-                            {
-                                "type": "SHOW_EXTERN_ANIM",
-                                "anim": {
-                                    "sheet": "player-sleeping",
-                                    "name": "wakeUp"
-                                }
-                            }
-                        ],
-                        "type": "DO_ACTION",
-                        "wait": true,
-                        "keepState": true
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "WAKING"
-                        },
-                        "type": "ADD_MSG_PERSON",
-                        "side": "LEFT",
-                        "order": 0,
-                        "clearSide": false
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "WAKING"
-                        },
-                        "message": {
-                            "en_US": "..."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "type": "CLEAR_MSG",
-                        "side": "ALL"
-                    },
-                    {
-                        "type": "PLAY_BGM",
-                        "bgm": "lea",
-                        "volume": 1,
-                        "mode": "SLOW"
-                    },
-                    {
-                        "pos": {
-                            "x": 500,
-                            "y": 456
-                        },
-                        "speed": "SLOW",
-                        "transition": "EASE_IN_OUT",
-                        "type": "SET_CAMERA_POS",
-                        "waitSkip": 0.2,
-                        "zoom": 1
-                    },
-                    {
-                        "entity": {
-                            "player": true
-                        },
-                        "action": [
-                            {
-                                "type": "SHOW_EXTERN_ANIM",
-                                "anim": {
-                                    "sheet": "player-sleeping",
-                                    "name": "getUp"
-                                },
-                                "wait": true
-                            },
-                            {
-                                "type": "SET_SLIP_THROUGH",
-                                "value": true
-                            },
-                            {
-                                "type": "SET_FACE",
-                                "face": "EAST",
-                                "rotate": false,
-                                "rotateSpeed": 3
-                            },
-                            {
-                                "type": "CLEAR_ANIMATION"
-                            },
-                            {
-                                "type": "SET_SHADOW",
-                                "size": 16
-                            },
-                            {
-                                "type": "SET_RELATIVE_SPEED",
-                                "value": 0.5
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 464,
-                                    "y": 496,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 488,
-                                    "y": 496,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 496,
-                                    "y": 472,
-                                    "lvl": "0"
-                                },
-                                "precise": true
-                            },
-                            {
-                                "type": "SET_FACE",
-                                "face": "SOUTH_EAST",
-                                "rotate": true,
-                                "rotateSpeed": 3
-                            },
-                            {
-                                "type": "SHOW_ANIMATION",
-                                "wait": true,
-                                "anim": "idleStretch"
-                            },
-                            {
-                                "type": "SET_FACE",
-                                "face": "EAST",
-                                "rotate": true,
-                                "rotateSpeed": 3
-                            }
-                        ],
-                        "type": "DO_ACTION",
-                        "wait": true,
-                        "keepState": false
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SURPRISED_TOWARD"
-                        },
-                        "type": "ADD_MSG_PERSON",
-                        "side": "LEFT"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SURPRISED_TOWARD"
-                        },
-                        "message": {
-                            "en_US": "...?"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "type": "CLEAR_MSG",
-                        "side": "ALL"
-                    },
-                    {
-                        "pos": {
-                            "x": 304,
-                            "y": 284
-                        },
-                        "speed": "SLOWER",
-                        "transition": "EASE_IN_OUT",
-                        "type": "SET_CAMERA_POS",
-                        "waitSkip": 0.2,
-                        "zoom": 1
-                    },
-                    {
-                        "entity": {
-                            "player": true
-                        },
-                        "action": [
-                            {
-                                "type": "SET_RELATIVE_SPEED",
-                                "value": 0.5
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 528,
-                                    "y": 440,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 528,
-                                    "y": 388,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 304,
-                                    "y": 376,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "target": {
-                                    "x": 304,
-                                    "y": 292,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "MOVE_TO_POINT",
-                                "precise": true,
-                                "target": {
-                                    "x": 284,
-                                    "y": 284,
-                                    "lvl": "0"
-                                }
-                            },
-                            {
-                                "type": "SET_FACE",
-                                "face": "WEST",
-                                "rotate": true,
-                                "rotateSpeed": 3
-                            },
-                            {
-                                "type": "WAIT",
-                                "time": 0.3
-                            }
-                        ],
-                        "type": "DO_ACTION",
-                        "wait": true,
-                        "keepState": true
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "THINKING"
-                        },
-                        "type": "ADD_MSG_PERSON",
-                        "side": "RIGHT"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "THINKING"
-                        },
-                        "message": {
-                            "en_US": "..."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "SMILE"
-                        },
-                        "type": "ADD_MSG_PERSON",
-                        "side": "LEFT"
-                    },
-                    {
-                        "type": "SET_MSG_EXPRESSION",
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SHOCKED"
-                        }
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "SMILE"
-                        },
-                        "message": {
-                            "en_US": "Good morning, Lea!"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SHOCKED"
-                        },
-                        "message": {
-                            "en_US": "...!"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "NOTIFYING"
-                        },
-                        "message": {
-                            "en_US": "Apologies, did I startle you?"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "DOWN_EYE_CLOSED"
-                        },
-                        "message": {
-                            "en_US": "..."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SHAKE"
-                        },
-                        "message": {
-                            "en_US": "[shakes head]"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "AWAY"
-                        },
-                        "message": {
-                            "en_US": "Alright then."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "DOWN"
-                        },
-                        "message": {
-                            "en_US": "Satoshi has asked me to tell you to visit him once you woke up."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.sergey",
-                            "expression": "NOTIFYING"
-                        },
-                        "message": {
-                            "en_US": "I think it is a rather urgent matter, so I recommend doing so right now."
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "person": {
-                            "person": "main.lea",
-                            "expression": "SURPRISED_TOWARD"
-                        },
-                        "message": {
-                            "en_US": "...?"
-                        },
-                        "type": "SHOW_MSG"
-                    },
-                    {
-                        "type": "SET_TASK",
-                        "keepDisplayed": true,
-                        "task": {
-                            "en_US": "Visit \\c[3]Satoshi\\c[0] in his home.",
-                            "de_DE": "",
-                            "ja_JP": "",
-                            "ko_KR": "",
-                            "zh_CN": "",
-                            "zh_TW": ""
-                        }
-                    },
-                    {
-                        "type": "CHANGE_VAR_NUMBER",
-                        "changeType": "set",
-                        "varName": "plot.projred.line",
-                        "value": 200
-                    }
-                ]
+  {
+    "type": "ENTER",
+    "index": ["entities"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+      "type": "EventTrigger",
+      "x": 621,
+      "y": 399,
+      "level": 0,
+      "settings": {
+        "name": "projredWake1",
+        "eventType": "CUTSCENE",
+        "startCondition": "plot.projred.line <= 100",
+        "endCondition": "plot.projred.line >= 200",
+        "triggerType": "ALWAYS",
+        "mapId": 3225427,
+        "event": [
+          {
+            "type": "SET_MOBILITY_BLOCK",
+            "value": "NONE"
+          },
+          {
+            "type": "PAUSE_BGM",
+            "mode": "IMMEDIATELY"
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "alpha": 1,
+            "time": 0,
+            "color": "black"
+          },
+          {
+            "pos": {
+              "x": 452,
+              "y": 460
+            },
+            "speed": "IMMEDIATELY",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 3
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_SHADOW",
+                "size": 0
+              },
+              {
+                "type": "SET_POS",
+                "newPos": {
+                  "x": 454,
+                  "y": 484,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "SET_SLIP_THROUGH",
+                "value": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "EAST",
+                "rotateSpeed": 3
+              },
+              {
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-sleeping",
+                  "name": "inBed"
+                }
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true
+          },
+          {
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT",
+            "fadeIn": 0,
+            "duration": 4,
+            "fadeOut": 1
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "white",
+            "alpha": 1,
+            "time": 0.5,
+            "lighter": false
+          },
+          {
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "zoom": 1,
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "duration": 4
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "white",
+            "alpha": 0,
+            "time": 3
+          },
+          {
+            "type": "SHOW_AR_MSG",
+            "entity": {
+              "player": true
+            },
+            "text": {
+              "en_US": "Initializing avatar",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            },
+            "time": 4,
+            "mode": "LINE_FILL",
+            "color": "GREEN"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SHOW_EFFECT",
+                "rotOffset": {
+                  "x": 1,
+                  "y": 1
+                },
+                "effect": {
+                  "sheet": "teleport",
+                  "name": "showSlowBed"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "duration": 0,
+                "align": "BOTTOM",
+                "wait": true,
+                "actionDetached": true,
+                "spriteFilter": [1]
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": false
+          },
+          {
+            "type": "WAIT",
+            "time": 4.5
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-sleeping",
+                  "name": "wakeUp"
+                }
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true,
+            "keepState": true
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "WAKING"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT",
+            "order": 0,
+            "clearSide": false
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "WAKING"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "type": "PLAY_BGM",
+            "bgm": "lea",
+            "volume": 1,
+            "mode": "SLOW"
+          },
+          {
+            "pos": {
+              "x": 500,
+              "y": 456
+            },
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "waitSkip": 0.2,
+            "zoom": 1
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-sleeping",
+                  "name": "getUp"
+                },
+                "wait": true
+              },
+              {
+                "type": "SET_SLIP_THROUGH",
+                "value": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "EAST",
+                "rotate": false,
+                "rotateSpeed": 3
+              },
+              {
+                "type": "CLEAR_ANIMATION"
+              },
+              {
+                "type": "SET_SHADOW",
+                "size": 16
+              },
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 464,
+                  "y": 496,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 488,
+                  "y": 496,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 496,
+                  "y": 472,
+                  "lvl": "0"
+                },
+                "precise": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "SOUTH_EAST",
+                "rotate": true,
+                "rotateSpeed": 3
+              },
+              {
+                "type": "SHOW_ANIMATION",
+                "wait": true,
+                "anim": "idleStretch"
+              },
+              {
+                "type": "SET_FACE",
+                "face": "EAST",
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true,
+            "keepState": false
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "message": {
+              "en_US": "...?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "pos": {
+              "x": 304,
+              "y": 284
+            },
+            "speed": "SLOWER",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "waitSkip": 0.2,
+            "zoom": 1
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 528,
+                  "y": 440,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 528,
+                  "y": 388,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 304,
+                  "y": 376,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 304,
+                  "y": 292,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "precise": true,
+                "target": {
+                  "x": 284,
+                  "y": 284,
+                  "lvl": "0"
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "face": "WEST",
+                "rotate": true,
+                "rotateSpeed": 3
+              },
+              {
+                "type": "WAIT",
+                "time": 0.3
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true,
+            "keepState": true
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "THINKING"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "THINKING"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "SMILE"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": {
+              "person": "main.lea",
+              "expression": "SHOCKED"
             }
-        }
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "SMILE"
+            },
+            "message": {
+              "en_US": "Good morning, Lea!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SHOCKED"
+            },
+            "message": {
+              "en_US": "...!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "NOTIFYING"
+            },
+            "message": {
+              "en_US": "Apologies, did I startle you?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DOWN_EYE_CLOSED"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SHAKE"
+            },
+            "message": {
+              "en_US": "[shakes head]"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "AWAY"
+            },
+            "message": {
+              "en_US": "Alright then."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "DOWN"
+            },
+            "message": {
+              "en_US": "Satoshi has asked me to tell you to visit him once you woke up."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "NOTIFYING"
+            },
+            "message": {
+              "en_US": "I think it is a rather urgent matter, so I recommend doing so right now."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "message": {
+              "en_US": "...?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "SET_TASK",
+            "keepDisplayed": true,
+            "task": {
+              "en_US": "Visit \\c[3]Satoshi\\c[0] in his home.",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            }
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
+            "changeType": "set",
+            "varName": "plot.projred.line",
+            "value": 200
+          }
+        ]
+      }
     }
+  }
 ]
