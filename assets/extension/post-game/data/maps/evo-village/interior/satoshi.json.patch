@@ -1,115 +1,117 @@
-[{
+[
+  {
     "type": "ENTER",
     "index": ["entities", 94, "settings", "npcStates"]
-},{
+  },
+  {
     "type": "ADD_ARRAY_ELEMENT",
-    "content": 
-          {
-            "reactType": "FIXED_FACE",
-            "face": "NORTH",
-            "action": [
-              {
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "chairTyping"
+    "content": {
+      "reactType": "FIXED_FACE",
+      "face": "NORTH",
+      "action": [
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "chairTyping"
+        },
+        {
+          "type": "WAIT",
+          "time": 1
+        },
+        {
+          "wait": false,
+          "viaWalkConfig": false,
+          "type": "SHOW_ANIMATION",
+          "anim": "chairClicking"
+        },
+        {
+          "type": "WAIT",
+          "time": 0.5
+        }
+      ],
+      "hidden": false,
+      "condition": "plot.line >= 52000 && plot.projred.line == 200",
+      "config": "chair",
+      "event": [
+        {
+          "person": {
+            "person": "main.lea",
+            "expression": "DEFAULT"
+          },
+          "type": "ADD_MSG_PERSON",
+          "side": "RIGHT"
+        },
+        {
+          "person": {
+            "person": "main.genius",
+            "expression": "CHAIR_SIDE"
+          },
+          "type": "ADD_MSG_PERSON",
+          "side": "LEFT"
+        },
+        {
+          "person": {
+            "person": "main.lea",
+            "expression": "DEFAULT"
+          },
+          "message": {
+            "en_US": "Hi!."
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "changeType": "set",
+          "type": "CHANGE_VAR_BOOL",
+          "varName": "tmp.codeStopped",
+          "value": true
+        },
+        {
+          "entity": {
+            "global": true,
+            "name": "satoshi"
+          },
+          "action": [
+            {
+              "entity": {
+                "player": true
               },
-              {
-                "type": "WAIT",
-                "time": 1
-              },
-              {
-                "wait": false,
-                "viaWalkConfig": false,
-                "type": "SHOW_ANIMATION",
-                "anim": "chairClicking"
-              },
-              {
-                "type": "WAIT",
-                "time": 0.5
-              }
-            ],
-            "hidden": false,
-            "condition": "plot.line >= 52000 && plot.projred.line == 200",
-            "config": "chair",
-            "event": [
-              {
-                "person": {
-                  "person": "main.lea",
-                  "expression": "DEFAULT"
-                },
-                "type": "ADD_MSG_PERSON",
-                "side": "RIGHT"
-              },
-              {
-                "person": {
-                  "person": "main.genius",
-                  "expression": "CHAIR_SIDE"
-                },
-                "type": "ADD_MSG_PERSON",
-                "side": "LEFT"
-              },
-              {
-                "person": {
-                  "person": "main.lea",
-                  "expression": "DEFAULT"
-                },
-                "message": {
-                  "en_US": "Hi!."
-                },
-                "type": "SHOW_MSG"
-              },
-              {
-                "changeType": "set",
-                "type": "CHANGE_VAR_BOOL",
-                "varName": "tmp.codeStopped",
-                "value": true
-              },
-              {
-                "entity": {
-                  "global": true,
-                  "name": "satoshi"
-                },
-                "action": [
-                  {
-                    "entity": {
-                      "player": true
-                    },
-                    "rotate": false,
-                    "rotateSpeed": 3,
-                    "type": "SET_FACE_TO_ENTITY"
-                  },
-                  {
-                    "wait": false,
-                    "viaWalkConfig": false,
-                    "type": "SHOW_ANIMATION",
-                    "anim": "chairLookSideway"
-                  },
-                  {
-                    "type": "WAIT",
-                    "time": -1
-                  }
-                ],
-                "repeating": false,
-                "wait": false,
-                "keepState": true,
-                "immediately": false,
-                "type": "DO_ACTION"
-              },
-              {
-                "person": {
-                  "person": "main.genius",
-                  "expression": "CHAIR_SIDE"
-                },
-                "message": {
-                  "en_US": "Hello Lea."
-                },
-                "type": "SHOW_MSG"
-              },
-              {
-                "type": "CLEAR_MSG",
-                "side": "ALL"
-              }
-            ]
-          }
-}]
+              "rotate": false,
+              "rotateSpeed": 3,
+              "type": "SET_FACE_TO_ENTITY"
+            },
+            {
+              "wait": false,
+              "viaWalkConfig": false,
+              "type": "SHOW_ANIMATION",
+              "anim": "chairLookSideway"
+            },
+            {
+              "type": "WAIT",
+              "time": -1
+            }
+          ],
+          "repeating": false,
+          "wait": false,
+          "keepState": true,
+          "immediately": false,
+          "type": "DO_ACTION"
+        },
+        {
+          "person": {
+            "person": "main.genius",
+            "expression": "CHAIR_SIDE"
+          },
+          "message": {
+            "en_US": "Hello Lea."
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "type": "CLEAR_MSG",
+          "side": "ALL"
+        }
+      ]
+    }
+  }
+]
