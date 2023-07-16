@@ -1,10 +1,6 @@
 {
   "name": "explore/arid/entrance",
-  "levels": [
-    {
-      "height": 0
-    }
-  ],
+  "levels": [{ "height": 0 }],
   "mapWidth": 50,
   "mapHeight": 50,
   "masterLevel": 0,
@@ -18,59 +14,14 @@
     "npcRunners": "",
     "area": "fallback"
   },
-  "screen": {
-    "x": 0,
-    "y": 0
-  },
+  "screen": { "x": 0, "y": 0 },
   "entities": [
-    {
-      "type": "EventTrigger",
-      "x": 450,
-      "y": 192,
-      "level": 0,
-      "settings": {
-        "mapId": 8,
-        "event": [
-          {
-            "entity": {
-              "global": true,
-              "name": "satoshi"
-            },
-            "action": [
-              {
-                "type": "SHOW_ANIMATION",
-                "anim": "chairClickingSingle",
-                "followUp": null,
-                "wait": false,
-                "viaWalkConfig": false
-              },
-              {
-                "type": "WAIT",
-                "time": -1
-              }
-            ],
-            "type": "DO_ACTION",
-            "wait": true,
-            "keepState": true,
-            "repeating": false
-          }
-        ],
-        "endCondition": "tmp.callStarted",
-        "eventType": "PARALLEL",
-        "triggerType": "ONCE_PER_ENTRY",
-        "name": "typingAnimation"
-      }
-    },
     {
       "type": "Marker",
       "x": 358,
       "y": 280,
       "level": 0,
-      "settings": {
-        "mapId": 9,
-        "name": "light",
-        "dir": "SOUTH"
-      }
+      "settings": { "mapId": 9, "name": "light", "dir": "SOUTH" }
     },
     {
       "type": "EventTrigger",
@@ -80,19 +31,8 @@
       "settings": {
         "mapId": 10,
         "event": [
-          {
-            "overMessage": false,
-            "type": "SET_OVERLAY",
-            "color": "black",
-            "alpha": 1,
-            "time": 0
-          },
-          {
-            "type": "HIDE_ENTITY",
-            "entity": {
-              "player": true
-            }
-          },
+          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 0 },
+          { "type": "HIDE_ENTITY", "entity": { "player": true } },
           {
             "type": "SET_ZOOM_BLUR",
             "zoomType": "LIGHTER",
@@ -102,10 +42,7 @@
             "name": "blur"
           },
           {
-            "pos": {
-              "x": 367,
-              "y": 403
-            },
+            "pos": { "x": 367, "y": 403 },
             "speed": "IMMEDIATELY",
             "transition": "EASE_IN_OUT",
             "type": "SET_CAMERA_POS",
@@ -113,28 +50,11 @@
             "waitSkip": 0,
             "zoom": 2
           },
+          { "type": "WAIT", "time": 1 },
+          { "type": "PLAY_BGM", "bgm": "dreamsequence-intro", "volume": 1, "mode": "SLOW" },
+          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 0, "time": 2 },
           {
-            "type": "WAIT",
-            "time": 1
-          },
-          {
-            "type": "PLAY_BGM",
-            "bgm": "dreamsequence-intro",
-            "volume": 1,
-            "mode": "SLOW"
-          },
-          {
-            "overMessage": false,
-            "type": "SET_OVERLAY",
-            "color": "black",
-            "alpha": 0,
-            "time": 2
-          },
-          {
-            "pos": {
-              "x": 367,
-              "y": 342
-            },
+            "pos": { "x": 367, "y": 342 },
             "speed": "SLOWEST",
             "transition": "EASE_IN_OUT",
             "type": "SET_CAMERA_POS",
@@ -142,255 +62,138 @@
             "waitSkip": 0,
             "zoom": 1.5
           },
-          {
-            "type": "WAIT",
-            "time": 0.2
-          },
+          { "type": "WAIT", "time": 0.2 },
           {
             "type": "PLAY_SOUND",
-            "position": {
-              "x": 1,
-              "y": 1
-            },
+            "position": { "x": 1, "y": 1 },
             "sound": "media/sound/hud/calling.ogg",
             "volume": 1,
             "loop": false,
             "name": ""
           },
-          {
-            "type": "WAIT",
-            "time": 2
-          },
+          { "type": "WAIT", "time": 2 },
           {
             "type": "PLAY_SOUND",
-            "position": {
-              "x": 1,
-              "y": 1
-            },
+            "position": { "x": 1, "y": 1 },
             "sound": "media/sound/hud/calling.ogg",
             "volume": 1,
             "loop": false,
             "name": ""
           },
-          {
-            "type": "WAIT",
-            "time": 2
-          },
+          { "type": "WAIT", "time": 2 },
           {
             "type": "PLAY_SOUND",
-            "position": {
-              "x": 1,
-              "y": 1
-            },
+            "position": { "x": 1, "y": 1 },
             "sound": "media/sound/hud/take-call.ogg",
             "volume": 1,
             "loop": false,
             "name": ""
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "NEUTRAL"
-            },
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.codeStopped",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "type": "SHOW_ANIMATION",
+            "entity": { "global": true, "name": "satoshi" },
+            "anim": "chairIdle"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "NEUTRAL" },
             "type": "ADD_MSG_PERSON",
             "side": "RIGHT"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "DEFAULT"
-            },
-            "message": {
-              "en_US": "Yes?"
-            },
+            "person": { "person": "main.genius", "expression": "DEFAULT" },
+            "message": { "en_US": "Yes?" },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "DOWN"
-            },
-            "message": {
-              "en_US": "What?"
-            },
+            "person": { "person": "main.genius", "expression": "DOWN" },
+            "message": { "en_US": "What?" },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "SERIOUS"
-            },
-            "message": {
-              "en_US": "...What do you mean?"
-            },
+            "person": { "person": "main.genius", "expression": "SERIOUS" },
+            "message": { "en_US": "...What do you mean?" },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "ASKING"
-            },
-            "message": {
-              "en_US": "They are planning an official release?!"
-            },
+            "person": { "person": "main.genius", "expression": "ASKING" },
+            "message": { "en_US": "They are planning an official release?!" },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "SERIOUS"
-            },
-            "message": {
-              "en_US": "Okay."
-            },
+            "person": { "person": "main.genius", "expression": "SERIOUS" },
+            "message": { "en_US": "Okay." },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "SERIOUS"
-            },
-            "message": {
-              "en_US": "Thank you."
-            },
+            "person": { "person": "main.genius", "expression": "SERIOUS" },
+            "message": { "en_US": "Thank you." },
             "type": "SHOW_MSG"
           },
-          {
-            "type": "CLEAR_MSG",
-            "side": "ALL"
-          },
-          {
-            "type": "WAIT",
-            "time": 0.2
-          },
+          { "type": "CLEAR_MSG", "side": "ALL" },
+          { "type": "WAIT", "time": 0.2 },
           {
             "type": "PLAY_SOUND",
-            "position": {
-              "x": 1,
-              "y": 1
-            },
+            "position": { "x": 1, "y": 1 },
             "sound": "media/sound/hud/end-call.ogg",
             "volume": 1,
             "loop": false,
             "name": ""
           },
           {
-            "entity": {
-              "global": true,
-              "name": "satoshi"
-            },
+            "entity": { "global": true, "name": "satoshi" },
             "action": [
-              {
-                "type": "WAIT",
-                "time": 0.6
-              },
-              {
-                "type": "SET_WEIGHT",
-                "value": -1
-              },
-              {
-                "type": "SET_COLL_TYPE",
-                "value": "NONE"
-              },
-              {
-                "type": "SHOW_ANIMATION",
-                "anim": "chairLeanBack"
-              },
-              {
-                "type": "SET_FACE",
-                "face": "NORTH",
-                "rotate": true,
-                "rotateSpeed": 3
-              },
+              { "type": "WAIT", "time": 0.6 },
+              { "type": "SET_WEIGHT", "value": -1 },
+              { "type": "SET_COLL_TYPE", "value": "NONE" },
+              { "type": "SHOW_ANIMATION", "anim": "chairLeanBack" },
+              { "type": "SET_FACE", "face": "NORTH", "rotate": true, "rotateSpeed": 3 },
               {
                 "type": "INTERPOLATE_POSITION",
-                "newPos": {
-                  "x": 365,
-                  "y": 356,
-                  "lvl": 0
-                },
+                "newPos": { "x": 365, "y": 356, "lvl": 0 },
                 "duration": 0.4,
                 "keySpline": "EASE_OUT_STRONG"
               },
-              {
-                "type": "WAIT",
-                "time": 0.1
-              }
+              { "type": "WAIT", "time": 0.1 }
             ],
             "type": "DO_ACTION",
             "wait": true,
             "keepState": true
           },
+          { "type": "WAIT", "time": 1 },
           {
-            "type": "WAIT",
-            "time": 1
-          },
-          {
-            "person": {
-              "person": "main.genius",
-              "expression": "EXHAUSTED"
-            },
+            "person": { "person": "main.genius", "expression": "EXHAUSTED" },
             "type": "ADD_MSG_PERSON",
             "side": "RIGHT"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "EXHAUSTED"
-            },
-            "message": {
-              "en_US": "Well..."
-            },
+            "person": { "person": "main.genius", "expression": "EXHAUSTED" },
+            "message": { "en_US": "Well..." },
             "type": "SHOW_MSG"
           },
           {
-            "person": {
-              "person": "main.genius",
-              "expression": "DRAMATIC"
-            },
-            "message": {
-              "en_US": "I guess this was unavoidable."
-            },
+            "person": { "person": "main.genius", "expression": "DRAMATIC" },
+            "message": { "en_US": "I guess this was unavoidable." },
             "type": "SHOW_MSG"
           },
+          { "type": "CLEAR_MSG", "side": "ALL" },
           {
-            "type": "CLEAR_MSG",
-            "side": "ALL"
-          },
-          {
-            "pos": {
-              "x": 367,
-              "y": 181
-            },
+            "pos": { "x": 367, "y": 181 },
             "speed": "SLOWEST",
             "transition": "EASE_IN",
             "type": "SET_CAMERA_POS",
             "zoom": 1.5
           },
-          {
-            "overMessage": true,
-            "type": "SET_OVERLAY",
-            "color": "black",
-            "alpha": 1,
-            "time": 2
-          },
-          {
-            "type": "PAUSE_BGM",
-            "mode": "SLOW"
-          },
-          {
-            "type": "WAIT",
-            "time": 2
-          },
-          {
-            "type": "FADE_OUT_ZOOM_BLUR",
-            "name": "blur",
-            "fadeOut": 1
-          },
-          {
-            "type": "WAIT",
-            "time": 0.5
-          },
+          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 2 },
+          { "type": "PAUSE_BGM", "mode": "SLOW" },
+          { "type": "WAIT", "time": 2 },
+          { "type": "FADE_OUT_ZOOM_BLUR", "name": "blur", "fadeOut": 1 },
+          { "type": "WAIT", "time": 0.5 },
           {
             "type": "CHANGE_VAR_NUMBER",
             "varName": "plot.version",
@@ -409,10 +212,7 @@
             "changeType": "set",
             "value": 100
           },
-          {
-            "type": "TELEPORT",
-            "map": "evo-village.interior.lea"
-          }
+          { "type": "TELEPORT", "map": "evo-village.interior.lea" }
         ],
         "eventType": "CUTSCENE",
         "endCondition": "false",
@@ -425,11 +225,7 @@
       "x": 351,
       "y": 385,
       "level": 0,
-      "settings": {
-        "mapId": 25,
-        "name": "start",
-        "dir": "SOUTH"
-      }
+      "settings": { "mapId": 25, "name": "start", "dir": "SOUTH" }
     },
     {
       "type": "EventTrigger",
@@ -441,20 +237,10 @@
         "event": [
           {
             "type": "SHOW_EFFECT",
-            "entity": {
-              "global": true,
-              "name": "light"
-            },
-            "effect": {
-              "sheet": "scene.dream",
-              "name": "darknessPoint"
-            },
+            "entity": { "global": true, "name": "light" },
+            "effect": { "sheet": "scene.dream", "name": "darknessPoint" },
             "duration": -1,
-            "offset": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
+            "offset": { "x": 0, "y": 0, "z": 0 },
             "align": "BOTTOM",
             "waitSkip": 0
           }
@@ -470,28 +256,14 @@
       "x": 426,
       "y": 157,
       "level": 0,
-      "settings": {
-        "mapId": 27,
-        "size": {
-          "x": 64,
-          "y": 15
-        },
-        "name": "Persistent events"
-      }
+      "settings": { "mapId": 27, "size": { "x": 64, "y": 15 }, "name": "Persistent events" }
     },
     {
       "type": "Note",
       "x": 506,
       "y": 157,
       "level": 0,
-      "settings": {
-        "mapId": 28,
-        "size": {
-          "x": 41,
-          "y": 15
-        },
-        "name": "Cutscenes"
-      }
+      "settings": { "mapId": 28, "size": { "x": 41, "y": 15 }, "name": "Cutscenes" }
     },
     {
       "type": "ObjectLayerView",
@@ -500,10 +272,7 @@
       "level": 0,
       "settings": {
         "mapId": 29,
-        "size": {
-          "x": 16,
-          "y": 32
-        },
+        "size": { "x": 16, "y": 32 },
         "layer": "object1",
         "collType": "BLOCK",
         "zHeight": 16,
@@ -520,10 +289,7 @@
       "level": 0,
       "settings": {
         "mapId": 30,
-        "size": {
-          "x": 16,
-          "y": 32
-        },
+        "size": { "x": 16, "y": 32 },
         "layer": "object1",
         "collType": "BLOCK",
         "zHeight": 16,
@@ -540,10 +306,7 @@
       "level": 0,
       "settings": {
         "mapId": 31,
-        "size": {
-          "x": 16,
-          "y": 48
-        },
+        "size": { "x": 16, "y": 48 },
         "layer": "object1",
         "collType": "BLOCK",
         "zHeight": 10,
@@ -560,10 +323,7 @@
       "level": 0,
       "settings": {
         "mapId": 32,
-        "size": {
-          "x": 16,
-          "y": 48
-        },
+        "size": { "x": 16, "y": 48 },
         "layer": "object1",
         "collType": "BLOCK",
         "zHeight": 10,
@@ -580,10 +340,7 @@
       "level": 0,
       "settings": {
         "mapId": 33,
-        "size": {
-          "x": 64,
-          "y": 16
-        },
+        "size": { "x": 64, "y": 16 },
         "layer": "object1",
         "collType": "BLOCK",
         "zHeight": 16,
@@ -600,10 +357,7 @@
       "level": 0,
       "settings": {
         "mapId": 11,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "lamp1"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "lamp1" },
         "propAnim": "",
         "condAnims": []
       }
@@ -615,10 +369,7 @@
       "level": 0,
       "settings": {
         "mapId": 12,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "lamp2"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "lamp2" },
         "propAnim": "",
         "condAnims": []
       }
@@ -627,16 +378,10 @@
       "type": "Prop",
       "x": 396,
       "y": 324,
-      "level": {
-        "level": 0,
-        "offset": 16
-      },
+      "level": { "level": 0, "offset": 16 },
       "settings": {
         "mapId": 13,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "display3"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "display3" },
         "propAnim": "",
         "condAnims": []
       }
@@ -645,16 +390,10 @@
       "type": "Prop",
       "x": 324,
       "y": 324,
-      "level": {
-        "level": 0,
-        "offset": 16
-      },
+      "level": { "level": 0, "offset": 16 },
       "settings": {
         "mapId": 16,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "display4"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "display4" },
         "propAnim": "",
         "condAnims": []
       }
@@ -663,16 +402,10 @@
       "type": "Prop",
       "x": 368,
       "y": 320,
-      "level": {
-        "level": 0,
-        "offset": 16
-      },
+      "level": { "level": 0, "offset": 16 },
       "settings": {
         "mapId": 18,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "display1"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "display1" },
         "propAnim": "",
         "condAnims": []
       }
@@ -684,10 +417,7 @@
       "level": 0,
       "settings": {
         "mapId": 19,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "plant1"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "plant1" },
         "propAnim": "",
         "condAnims": []
       }
@@ -696,16 +426,10 @@
       "type": "Prop",
       "x": 344,
       "y": 320,
-      "level": {
-        "level": 0,
-        "offset": 16
-      },
+      "level": { "level": 0, "offset": 16 },
       "settings": {
         "mapId": 20,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "display1"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "display1" },
         "propAnim": "",
         "condAnims": []
       }
@@ -717,10 +441,7 @@
       "level": 0,
       "settings": {
         "mapId": 21,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "lamp1"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "lamp1" },
         "propAnim": "",
         "condAnims": []
       }
@@ -732,10 +453,7 @@
       "level": 0,
       "settings": {
         "mapId": 22,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "wood-container"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "wood-container" },
         "propAnim": "",
         "condAnims": []
       }
@@ -747,10 +465,7 @@
       "level": 0,
       "settings": {
         "mapId": 23,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "wood-container"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "wood-container" },
         "propAnim": "",
         "condAnims": []
       }
@@ -762,50 +477,9 @@
       "level": 0,
       "settings": {
         "mapId": 24,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "broom"
-        },
+        "propType": { "sheet": "evo-village-inner", "name": "broom" },
         "propAnim": "",
         "condAnims": []
-      }
-    },
-    {
-      "type": "Prop",
-      "x": 346,
-      "y": 322,
-      "level": {
-        "level": 0,
-        "offset": 22
-      },
-      "settings": {
-        "mapId": 14,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "displayAni1"
-        },
-        "propAnim": "default",
-        "condAnims": [],
-        "name": "A"
-      }
-    },
-    {
-      "type": "Prop",
-      "x": 370,
-      "y": 322,
-      "level": {
-        "level": 0,
-        "offset": 22
-      },
-      "settings": {
-        "mapId": 17,
-        "propType": {
-          "sheet": "evo-village-inner",
-          "name": "displayAni1"
-        },
-        "propAnim": "default",
-        "condAnims": [],
-        "name": "B"
       }
     },
     {
@@ -819,10 +493,43 @@
           {
             "reactType": "FIXED_FACE",
             "face": "NORTH",
-            "action": [],
+            "action": [
+              {
+                "type": "IF",
+                "condition": "tmp.codeStopped",
+                "withElse": true,
+                "thenStep": [
+                  { "type": "WAIT", "time": 1 },
+                  {
+                    "wait": false,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "chairIdle"
+                  },
+
+                  { "type": "WAIT", "time": 0.5 }
+                ],
+                "elseStep": [
+                  {
+                    "wait": false,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "chairTyping"
+                  },
+                  { "type": "WAIT", "time": 1 },
+                  {
+                    "wait": false,
+                    "viaWalkConfig": false,
+                    "type": "SHOW_ANIMATION",
+                    "anim": "chairClicking"
+                  },
+                  { "type": "WAIT", "time": 0.5 }
+                ]
+              }
+            ],
             "hidden": false,
             "condition": "",
-            "config": "normal",
+            "config": "chair",
             "event": []
           }
         ],
@@ -831,25 +538,29 @@
       }
     },
     {
-      "type": "NPC",
-      "x": 357,
-      "y": null,
-      "level": 0,
+      "type": "Prop",
+      "x": 346,
+      "y": 322,
+      "level": { "level": 0, "offset": 22 },
       "settings": {
-        "mapId": 34,
-        "npcStates": [
-          {
-            "reactType": "FIXED_FACE",
-            "face": "NORTH",
-            "action": [],
-            "hidden": false,
-            "condition": "",
-            "config": "normal",
-            "event": []
-          }
-        ],
-        "characterName": "main.genius",
-        "name": "genius"
+        "mapId": 14,
+        "propType": { "sheet": "evo-village-inner", "name": "displayAni1" },
+        "propAnim": "default",
+        "condAnims": [{ "condition": "tmp.codeStopped", "anim": "stopped" }],
+        "name": "A"
+      }
+    },
+    {
+      "type": "Prop",
+      "x": 370,
+      "y": 322,
+      "level": { "level": 0, "offset": 22 },
+      "settings": {
+        "mapId": 17,
+        "propType": { "sheet": "evo-village-inner", "name": "displayAni1" },
+        "propAnim": "default",
+        "condAnims": [{ "condition": "tmp.codeStopped", "anim": "stopped" }],
+        "name": "B"
       }
     }
   ],
@@ -865,10 +576,7 @@
       "repeat": false,
       "distance": 1,
       "tilesize": 16,
-      "moveSpeed": {
-        "x": 0,
-        "y": 0
-      },
+      "moveSpeed": { "x": 0, "y": 0 },
       "data": [
         [
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1084,10 +792,7 @@
       "repeat": false,
       "distance": 1,
       "tilesize": 16,
-      "moveSpeed": {
-        "x": 0,
-        "y": 0
-      },
+      "moveSpeed": { "x": 0, "y": 0 },
       "data": [
         [
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1303,10 +1008,7 @@
       "repeat": false,
       "distance": 1,
       "tilesize": 16,
-      "moveSpeed": {
-        "x": 0,
-        "y": 0
-      },
+      "moveSpeed": { "x": 0, "y": 0 },
       "data": [
         [
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1522,10 +1224,7 @@
       "repeat": false,
       "distance": 1,
       "tilesize": 16,
-      "moveSpeed": {
-        "x": 0,
-        "y": 0
-      },
+      "moveSpeed": { "x": 0, "y": 0 },
       "data": [
         [
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1741,10 +1440,7 @@
       "repeat": false,
       "distance": 1,
       "tilesize": 16,
-      "moveSpeed": {
-        "x": 0,
-        "y": 0
-      },
+      "moveSpeed": { "x": 0, "y": 0 },
       "data": [
         [
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
