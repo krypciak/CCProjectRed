@@ -208,7 +208,7 @@
               {
                 "type": "SET_POS",
                 "newPos": {
-                  "x": 545,
+                  "x": 550,
                   "y": 377,
                   "z": 0,
                   "lvl": 0
@@ -216,7 +216,7 @@
               },
               {
                 "type": "SET_FACE",
-                "face": "WEST",
+                "face": "NORTH",
                 "rotate": false,
                 "rotateSpeed": 3
               },
@@ -224,7 +224,7 @@
                 "type": "SHOW_EXTERN_ANIM",
                 "anim": {
                   "sheet": "player-poses",
-                  "name": "sitGroundFaceUpRight"
+                  "name": "sitGroundFaceUpLeft"
                 }
               }
             ],
@@ -234,6 +234,12 @@
           {
             "type": "WAIT",
             "time": 0.5
+          },
+          {
+            "type": "PLAY_BGM",
+            "bgm": "puzzle-pg",
+            "volume": 1,
+            "mode": "SLOW"
           },
           {
             "overMessage": false,
@@ -500,6 +506,11 @@
             "type": "CHANGE_VAR_BOOL",
             "varName": "tmp.codeStopped",
             "value": false
+          },
+          {
+            "type": "RESUME_DEFAULT_BGM",
+            "mode": "SLOW",
+            "delayed": true
           },
           {
             "type": "SET_TASK",
