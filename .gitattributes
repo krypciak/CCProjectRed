@@ -1,0 +1,2 @@
+*.json.patch linguist-language=JSON
+.vanilla-workspaces/** filter=git-crypt diff=git-crypt
