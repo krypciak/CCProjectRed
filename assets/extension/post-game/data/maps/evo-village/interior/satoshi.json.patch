@@ -35,6 +35,9 @@
       "config": "chair",
       "event": [
         {
+          "type": "CLEAR_TASK"
+        },
+        {
           "person": {
             "person": "main.lea",
             "expression": "DEFAULT"
