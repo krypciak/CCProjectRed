@@ -1,0 +1,16 @@
+[
+  {
+    "type": "ENTER",
+    "index": ["SUB", 1, "SUB"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "name": "sitGroundFaceUpLeft",
+      "time": 0.07,
+      "repeat": false,
+      "frames": [9],
+      "framesFlipX": [1]
+    }
+  }
+]
