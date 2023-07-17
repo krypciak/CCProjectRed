@@ -307,10 +307,20 @@
           {
             "person": {
               "person": "main.genius",
-              "expression": "CHAIR_SIDE"
+              "expression": "CHAIR_DOWN"
             },
             "message": {
-              "en_US": "Shortly after your most recent entrance into the Evotarground, he had been put in charge of further developing the area. It was named \\c[1]Project Red\\c[0]."
+              "en_US": "Shortly after your most recent entrance into the Evotarground, he had been put in charge of further developing the area."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
+            "message": {
+              "en_US": "They named the operation...\\. \\c[1]Project Red\\c[0]."
             },
             "type": "SHOW_MSG"
           },
@@ -330,7 +340,7 @@
               "expression": "CHAIR_DEFAULT"
             },
             "message": {
-              "en_US": "Obviously, Instatainment was made aware of the area's existence after all the discourse."
+              "en_US": "Obviously, Instatainment became aware of the area's existence after all the discourse."
             },
             "type": "SHOW_MSG"
           },
@@ -413,6 +423,10 @@
               "en_US": "...?"
             },
             "type": "SHOW_MSG"
+          },
+          {
+            "name": "This isn't a label, but a note. Should probably expand a bit on the below four messages, as it's a bit short...",
+            "type": "LABEL"
           },
           {
             "person": {
@@ -538,6 +552,21 @@
             },
             "message": {
               "en_US": "Did I hear that right? Are they planning to officially introduce Vermillion Wasteland?",
+              "de_DE": "",
+              "ja_JP": "",
+              "ko_KR": "",
+              "zh_CN": "",
+              "zh_TW": ""
+            }
+          },
+          {
+            "type": "SHOW_SIDE_MSG",
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD"
+            },
+            "message": {
+              "en_US": "[nods]",
               "de_DE": "",
               "ja_JP": "",
               "ko_KR": "",
