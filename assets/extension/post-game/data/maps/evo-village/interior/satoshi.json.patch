@@ -482,6 +482,12 @@
             "keepState": true
           },
           {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.codeStopped",
+            "value": false
+          },
+          {
             "type": "SET_TASK",
             "task": {
               "en_US": "Return to the hidden entrance of \\c[3]Vermillion Wasteland\\c[0].",
