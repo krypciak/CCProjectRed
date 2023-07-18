@@ -1,0 +1,79 @@
+[
+  {
+    "type": "ENTER",
+    "index": ["entities"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 1655,
+      "y": 699,
+      "level": 1,
+      "settings": {
+        "mapId": 946,
+        "event": [
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 1,
+            "time": 0
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_POS",
+                "newPos": {
+                  "x": 1146,
+                  "y": 698,
+                  "z": 0,
+                  "lvl": 0
+                }
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true
+          },
+          {
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 1551,
+                  "y": 789,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              }
+            ],
+            "type": "DO_ACTION"
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 0,
+            "time": 1
+          }
+        ],
+        "name": "PRInvestigate",
+        "triggerType": "ALWAYS",
+        "startCondition": "plot.projred.line >= 300",
+        "endCondition": "plot.projred.line >= 400",
+        "eventType": "CUTSCENE"
+      }
+    }
+  }
+]
