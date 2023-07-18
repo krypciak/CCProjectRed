@@ -490,11 +490,22 @@
             },
             "action": [
               {
+                "type": "SHOW_EXTERN_ANIM",
+                "anim": {
+                  "sheet": "player-poses",
+                  "name": "landOnGround"
+                }
+              },
+              {
+                "type": "WAIT",
+                "time": 0.2
+              },
+              {
                 "type": "CLEAR_ANIMATION"
               },
               {
                 "type": "SET_FACE",
-                "face": "NORTH_WEST",
+                "face": "NORTH",
                 "rotateSpeed": 3
               }
             ],
@@ -509,7 +520,7 @@
           },
           {
             "type": "RESUME_DEFAULT_BGM",
-            "mode": "SLOW",
+            "mode": "FAST",
             "delayed": true
           },
           {
