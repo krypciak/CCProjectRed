@@ -191,7 +191,13 @@
       "settings": {
         "mapId": 115,
         "event": [
-          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 0 },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 1,
+            "time": 0
+          },
           {
             "type": "CHANGE_VAR_BOOL",
             "varName": "tmp.pillowThere",
@@ -199,122 +205,233 @@
             "value": true
           },
           {
-            "entity": { "player": true },
+            "entity": {
+              "player": true
+            },
             "action": [
-              { "type": "SET_POS", "newPos": { "x": 550, "y": 377, "z": 0, "lvl": 0 } },
-              { "type": "SET_FACE", "face": "NORTH", "rotate": false, "rotateSpeed": 3 },
+              {
+                "type": "SET_POS",
+                "newPos": {
+                  "x": 550,
+                  "y": 377,
+                  "z": 0,
+                  "lvl": 0
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "face": "NORTH",
+                "rotate": false,
+                "rotateSpeed": 3
+              },
               {
                 "type": "SHOW_EXTERN_ANIM",
-                "anim": { "sheet": "player-poses", "name": "sitGroundFaceUpLeft" }
+                "anim": {
+                  "sheet": "player-poses",
+                  "name": "sitGroundFaceUpLeft"
+                }
               }
             ],
             "type": "DO_ACTION",
             "keepState": true
           },
-          { "type": "WAIT", "time": 0.5 },
-          { "type": "PLAY_BGM", "bgm": "puzzle-pg", "volume": 1, "mode": "SLOW" },
-          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 0, "time": 1 },
-          { "zoom": 1.5, "transition": "EASE_IN_OUT", "type": "SET_CAMERA_ZOOM", "duration": 2 },
           {
-            "person": { "person": "main.lea", "expression": "NERVOUS" },
+            "type": "WAIT",
+            "time": 0.5
+          },
+          {
+            "type": "PLAY_BGM",
+            "bgm": "puzzle-pg",
+            "volume": 1,
+            "mode": "SLOW"
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 0,
+            "time": 1
+          },
+          {
+            "zoom": 1.5,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "duration": 2
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "NERVOUS"
+            },
             "type": "ADD_MSG_PERSON",
             "side": "RIGHT"
           },
           {
-            "person": { "person": "main.genius", "expression": "DEFAULT" },
+            "person": {
+              "person": "main.genius",
+              "expression": "DEFAULT"
+            },
             "type": "ADD_MSG_PERSON",
             "side": "LEFT"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DEFAULT" },
-            "message": { "en_US": "Thank you for coming, Lea." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
+            "message": {
+              "en_US": "Thank you for coming, Lea."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DEFAULT" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
             "message": {
               "en_US": "Last night, I got a call from one of my colleagues in the development department."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
             "message": {
               "en_US": "Apparently, they had not been completely transparent with me for a while, but for a reason."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "SURPRISED_TOWARD" },
-            "message": { "en_US": "...?" },
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "message": {
+              "en_US": "...?"
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
             "message": {
               "en_US": "Shortly after your most recent entrance into the Evotarground, he had been put in charge of further developing the area."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
-            "message": { "en_US": "They named the operation...\\. \\c[1]Project Red\\c[0]." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
+            "message": {
+              "en_US": "They named the operation...\\. \\c[1]Project Red\\c[0]."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "SURPRISED" },
-            "message": { "en_US": "...!" },
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED"
+            },
+            "message": {
+              "en_US": "...!"
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DEFAULT" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
             "message": {
               "en_US": "Obviously, Instatainment became aware of the area's existence after all the discourse."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
             "message": {
               "en_US": "It seems they are trying to use it as a way to expand CrossWorlds' content to keep players busy while waiting for the new game."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DEFAULT" },
-            "message": { "en_US": "I'm not sure how to feel about this." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
+            "message": {
+              "en_US": "I'm not sure how to feel about this."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "THINKING" },
-            "message": { "en_US": "..." },
+            "person": {
+              "person": "main.lea",
+              "expression": "THINKING"
+            },
+            "message": {
+              "en_US": "..."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
-            "message": { "en_US": "Frankly, this situation is already getting on my nerves." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
+            "message": {
+              "en_US": "Frankly, this situation is already getting on my nerves."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
             "message": {
               "en_US": "Using an area with such emotional weight for many people was the last thing I needed."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "SAD" },
-            "message": { "en_US": "..." },
+            "person": {
+              "person": "main.lea",
+              "expression": "SAD"
+            },
+            "message": {
+              "en_US": "..."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DEFAULT" },
-            "message": { "en_US": "Anyways, despite all that, I do have something for you to do." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
+            "message": {
+              "en_US": "Anyways, despite all that, I do have something for you to do."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "SURPRISED_TOWARD" },
-            "message": { "en_US": "...?" },
+            "person": {
+              "person": "main.lea",
+              "expression": "SURPRISED_TOWARD"
+            },
+            "message": {
+              "en_US": "...?"
+            },
             "type": "SHOW_MSG"
           },
           {
@@ -322,40 +439,83 @@
             "type": "LABEL"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_SIDE" },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_SIDE"
+            },
             "message": {
               "en_US": "I need you to return to the hidden entrance that leads to the Evotarground."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_SIDE" },
-            "message": { "en_US": "Please see if you can already access it. " },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_SIDE"
+            },
+            "message": {
+              "en_US": "Please see if you can already access it. "
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "PROUD" },
-            "message": { "en_US": "...!" },
+            "person": {
+              "person": "main.lea",
+              "expression": "PROUD"
+            },
+            "message": {
+              "en_US": "...!"
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.genius", "expression": "CHAIR_DOWN" },
-            "message": { "en_US": "Thank you." },
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DOWN"
+            },
+            "message": {
+              "en_US": "Thank you."
+            },
             "type": "SHOW_MSG"
           },
-          { "type": "CLEAR_MSG", "side": "ALL" },
-          { "zoom": 1, "transition": "EASE_IN_OUT", "type": "SET_CAMERA_ZOOM", "duration": 1 },
           {
-            "entity": { "player": true },
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "zoom": 1,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "duration": 1
+          },
+          {
+            "entity": {
+              "player": true
+            },
             "action": [
               {
                 "type": "SHOW_EXTERN_ANIM",
-                "anim": { "sheet": "player-poses", "name": "landOnGround" }
+                "anim": {
+                  "sheet": "player-poses",
+                  "name": "landOnGround"
+                }
               },
-              { "type": "WAIT", "time": 0.2 },
-              { "type": "CLEAR_ANIMATION" },
-              { "type": "SET_FACE", "face": "NORTH", "rotateSpeed": 3 },
-              { "type": "WAIT", "time": 0.2 }
+              {
+                "type": "WAIT",
+                "time": 0.2
+              },
+              {
+                "type": "CLEAR_ANIMATION"
+              },
+              {
+                "type": "SET_FACE",
+                "face": "NORTH",
+                "rotateSpeed": 3
+              },
+              {
+                "type": "WAIT",
+                "time": 0.2
+              }
             ],
             "type": "DO_ACTION",
             "keepState": true,
@@ -368,12 +528,22 @@
             "value": false
           },
           {
-            "entity": { "player": true },
+            "entity": {
+              "player": true
+            },
             "action": [
-              { "type": "SET_RELATIVE_SPEED", "value": 0.5 },
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
               {
                 "type": "MOVE_TO_POINT",
-                "target": { "x": 528, "y": 506, "z": 0, "lvl": 0 },
+                "target": {
+                  "x": 528,
+                  "y": 506,
+                  "z": 0,
+                  "lvl": 0
+                },
                 "precise": true,
                 "forceTime": false
               }
@@ -381,65 +551,120 @@
             "type": "DO_ACTION",
             "keepState": true
           },
-          { "type": "WAIT", "time": 1.2 },
-          { "type": "RESUME_DEFAULT_BGM", "mode": "FAST", "delayed": false },
           {
-            "person": { "person": "main.lea", "expression": "DEFAULT" },
+            "type": "WAIT",
+            "time": 1.2
+          },
+          {
+            "type": "RESUME_DEFAULT_BGM",
+            "mode": "FAST",
+            "delayed": false
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
             "type": "ADD_MSG_PERSON",
             "side": "LEFT"
           },
           {
-            "person": { "person": "main.sergey", "expression": "THINKING" },
+            "person": {
+              "person": "main.sergey",
+              "expression": "THINKING"
+            },
             "type": "ADD_MSG_PERSON",
             "side": "RIGHT"
           },
           {
-            "person": { "person": "main.sergey", "expression": "THINKING" },
+            "person": {
+              "person": "main.sergey",
+              "expression": "THINKING"
+            },
             "message": {
               "en_US": "Did I hear that right? Are they planning to officially introduce Vermillion Wasteland?"
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "NOD" },
-            "message": { "en_US": "[nods]" },
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD"
+            },
+            "message": {
+              "en_US": "[nods]"
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.sergey", "expression": "WORRIED" },
-            "message": { "en_US": "That is slightly concerning..." },
+            "person": {
+              "person": "main.sergey",
+              "expression": "WORRIED"
+            },
+            "message": {
+              "en_US": "That is slightly concerning..."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.sergey", "expression": "EYES_CLOSED" },
+            "person": {
+              "person": "main.sergey",
+              "expression": "EYES_CLOSED"
+            },
             "message": {
               "en_US": "I had expected as much. The moment they found out about it, they would obviously consider its potential."
             },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "SAD" },
-            "message": { "en_US": "..." },
+            "person": {
+              "person": "main.lea",
+              "expression": "SAD"
+            },
+            "message": {
+              "en_US": "..."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.sergey", "expression": "NOTIFYING" },
-            "message": { "en_US": "Anyways, let us take a look at the hidden entrance, Lea." },
+            "person": {
+              "person": "main.sergey",
+              "expression": "NOTIFYING"
+            },
+            "message": {
+              "en_US": "Anyways, let us take a look at the hidden entrance, Lea."
+            },
             "type": "SHOW_MSG"
           },
           {
-            "person": { "person": "main.lea", "expression": "NOD" },
-            "message": { "en_US": "[nods]" },
+            "person": {
+              "person": "main.lea",
+              "expression": "NOD"
+            },
+            "message": {
+              "en_US": "[nods]"
+            },
             "type": "SHOW_MSG"
           },
-          { "type": "CLEAR_MSG", "side": "ALL" },
           {
-            "entity": { "player": true },
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "entity": {
+              "player": true
+            },
             "action": [
-              { "type": "SET_RELATIVE_SPEED", "value": 1 },
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 1
+              },
               {
                 "type": "NAVIGATE_TO_ENTITY",
-                "entity": { "global": true, "name": "exit" },
+                "entity": {
+                  "global": true,
+                  "name": "exit"
+                },
                 "precise": true
               }
             ],
@@ -451,7 +676,11 @@
             "type": "SET_OVERLAY",
             "color": "black",
             "alpha": 1,
-            "time": 1.5
+            "time": 1
+          },
+          {
+            "type": "WAIT",
+            "time": 1
           },
           {
             "type": "CHANGE_VAR_NUMBER",
@@ -459,7 +688,10 @@
             "changeType": "set",
             "value": 300
           },
-          { "type": "TELEPORT", "map": "forest.path-10" }
+          {
+            "type": "TELEPORT",
+            "map": "forest.path-10"
+          }
         ],
         "name": "PRReveal",
         "startCondition": "plot.projred.line >= 210",
