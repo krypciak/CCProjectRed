@@ -1,7 +1,16 @@
 [
   {
     "type": "ENTER",
-    "index": ["entities"]
+    "index": ["entities", 94, "settings"]
+  },
+  {
+    "type": "SET_KEY",
+    "index": "condition",
+    "content": "!plot.projred.line >= 300 /* doesn't work atm, figure out why */"
+  },
+  {
+    "type": "EXIT",
+    "count": 2
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
@@ -21,6 +30,16 @@
             "time": 0
           },
           {
+            "pos": {
+              "x": 1146,
+              "y": 698
+            },
+            "speed": "IMMEDIATELY",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 2
+          },
+          {
             "entity": {
               "player": true
             },
@@ -28,8 +47,8 @@
               {
                 "type": "SET_POS",
                 "newPos": {
-                  "x": 1146,
-                  "y": 698,
+                  "x": 1322,
+                  "y": 727,
                   "z": 0,
                   "lvl": 0
                 }
@@ -41,6 +60,13 @@
           {
             "type": "WAIT",
             "time": 0.5
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 0,
+            "time": 3
           },
           {
             "entity": {
@@ -58,14 +84,287 @@
                 "precise": true
               }
             ],
-            "type": "DO_ACTION"
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          {
+            "pos": {
+              "x": 1551,
+              "y": 789
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 1,
+            "wait": true
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "SIDE"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "AWAY"
+            },
+            "message": {
+              "en_US": "Well, back in Sapphire Ridge."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "pos": {
+              "x": 1814,
+              "y": 727
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 1
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 1687,
+                  "y": 780,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true
+          },
+          {
+            "person": {
+              "expression": "DOWN",
+              "person": "main.sergey"
+            },
+            "message": {
+              "en_US": "I always found this area the prettiest myself."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 1814,
+                  "y": 727,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "EAST",
+                "rotate": false,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "HAND_POINT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "HAND_POINT"
+            },
+            "message": {
+              "en_US": "Lea!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "expression": "THINKING",
+              "person": "main.sergey"
+            },
+            "message": {
+              "en_US": "Um... yes, Lea?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "JUMP",
+                "jumpHeight": "S",
+                "wait": true
+              },
+              {
+                "type": "JUMP",
+                "jumpHeight": "S",
+                "wait": true
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "ANNOYED"
+            },
+            "message": {
+              "en_US": "Lea..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "expression": "NOTIFYING",
+              "person": "main.sergey"
+            },
+            "message": {
+              "en_US": "Oh, the entrance, sorry!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.barrierOpenHideout",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "type": "WAIT",
+            "time": 3
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "WHISTLING"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
+              "person": "main.sergey",
+              "expression": "WHISTLING"
+            },
+            "message": {
+              "en_US": "There we go!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "PROUD"
+            },
+            "message": {
+              "en_US": "...!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 1950,
+                  "y": 727,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": false,
+            "repeating": false
           },
           {
             "overMessage": false,
             "type": "SET_OVERLAY",
             "color": "black",
-            "alpha": 0,
+            "alpha": 1,
             "time": 1
+          },
+          {
+            "type": "WAIT",
+            "time": 1
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.projred.line",
+            "changeType": "set",
+            "value": 400
+          },
+          {
+            "type": "TELEPORT",
+            "map": "forest.path-10-hidden"
           }
         ],
         "name": "PRInvestigate",
