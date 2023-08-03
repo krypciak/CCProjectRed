@@ -1,4 +1,3 @@
-/// <reference path="../../global.d.ts" />
 import './press-start.js';
 
 ig.module('ccexplore.title-screen')

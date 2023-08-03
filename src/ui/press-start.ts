@@ -1,4 +1,3 @@
-/// <reference path="../../global.d.ts" />
 ig.module('ccexplore.start-gui').defines(() => {
   sc.CCExploreStartGui = ig.GuiElementBase.extend({
     transitions: {
