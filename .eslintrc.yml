@@ -30,6 +30,19 @@ overrides:
       # because I have to use '.js' file extensions in imports
       node/no-missing-import: off
 
+      # The eslint config require in prettier.config.js is erroring because of
+      # this, we won't be publishing anything to npm so it is safe to disable
+      # it.
+      node/no-unpublished-require: off
+
+      # Copied in because it is erroring out on eslint-config-dmitmel#v8.2.2
+      no-use-before-define:
+        - error
+        - functions: false
+          classes: false
+          variables: true
+          allowNamedExports: true
+
       '@typescript-eslint/naming-convention':
         - warn
         - selector: default
