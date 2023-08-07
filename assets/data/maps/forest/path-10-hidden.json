@@ -2690,6 +2690,399 @@
       }
     },
     {
+      "type": "EventTrigger",
+      "x": 253,
+      "y": 435,
+      "level": 1,
+      "settings": {
+        "mapId": 296,
+        "event": [
+          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 0 },
+          {
+            "entity": { "player": true },
+            "action": [
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 288, "y": 512, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 464, "y": 416, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 488, "y": 368, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 496, "y": 336, "lvl": "1" }
+              },
+              { "type": "SET_RELATIVE_SPEED", "value": 0.5 },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 496, "y": 256, "lvl": "1" },
+                "precise": true
+              }
+            ],
+            "type": "DO_ACTION"
+          },
+          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 0, "time": 3 },
+          {
+            "pos": { "x": 496, "y": 368 },
+            "speed": "SLOW",
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 1
+          },
+          {
+            "pos": { "x": 496, "y": 256 },
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 1
+          },
+          {
+            "entity": { "player": true },
+            "action": [{ "type": "SET_FACE", "face": "WEST", "rotate": true, "rotateSpeed": 1 }],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          { "type": "WAIT", "time": 0.3 },
+          {
+            "pos": { "x": 218, "y": 236 },
+            "speed": "FAST",
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 1
+          },
+          {
+            "entity": { "player": true },
+            "action": [
+              { "type": "SET_FACE", "face": "SOUTH_EAST", "rotate": true, "rotateSpeed": 1 }
+            ],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          { "type": "WAIT", "time": 0.3 },
+          {
+            "pos": { "x": 637, "y": 454 },
+            "speed": "FAST",
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 1
+          },
+          {
+            "entity": { "player": true },
+            "action": [{ "type": "SET_FACE", "face": "EAST", "rotate": true, "rotateSpeed": 1 }],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          { "type": "WAIT", "time": 0.3 },
+          {
+            "pos": { "x": 725, "y": 280 },
+            "speed": "FAST",
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_POS",
+            "wait": true,
+            "waitSkip": 0,
+            "zoom": 1
+          },
+          {
+            "entity": { "player": true },
+            "action": [{ "type": "SET_FACE", "face": "SOUTH", "rotate": true, "rotateSpeed": 1 }],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          { "type": "WAIT", "time": 0.3 },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "waitSkip": 0,
+            "zoom": 1,
+            "type": "SET_CAMERA_TARGET",
+            "entity": { "player": true },
+            "wait": true
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "SURPRISED" },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "SURPRISED" },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "SURPRISED" },
+            "message": { "en_US": "...!" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "expression": "SURPRISED", "person": "main.sergey" },
+            "message": { "en_US": "They fixed up the exterior...?" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": { "person": "main.lea", "expression": "NERVOUS" }
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "THINKING" },
+            "message": { "en_US": "It appears that Satoshi was right." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "NOTIFYING" },
+            "message": {
+              "en_US": "I suppose they have already made the necessary preparations to release the area."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "WHISTLING" },
+            "message": { "en_US": "Let us report back to Satoshi for now." },
+            "type": "SHOW_MSG"
+          },
+          { "type": "CLEAR_MSG", "side": "ALL" },
+          { "type": "RING_PRIVATE_MSG", "outgoing": true },
+          { "type": "START_PRIVATE_MSG" },
+          {
+            "person": { "person": "main.sergey", "expression": "DEFAULT" },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "DEFAULT" },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "DEFAULT" },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "DEFAULT" },
+            "message": { "en_US": "Hello there." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "EXCITED" },
+            "message": { "en_US": "Hi!" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "DEFAULT" },
+            "message": { "en_US": "Hello, Satoshi." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": { "person": "main.lea", "expression": "DEFAULT" }
+          },
+          {
+            "person": { "person": "main.genius", "expression": "ASKING" },
+            "message": { "en_US": "So, have you returned to the hidden entrance yet?" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "NOTIFYING" },
+            "message": { "en_US": "Yes, we have.\\. In fact, we are right in front of it." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "DOWN" },
+            "message": { "en_US": "Ah, great. So, what are your findings?" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "SERIOUS" },
+            "message": {
+              "en_US": "The area has been cleaned up but the entrance is currently sealed."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "WORRIED" },
+            "message": { "en_US": "I assume they intend to open it up soon." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "EXHAUSTED" },
+            "message": {
+              "en_US": "Yes, they are actually intending to release the area in a few days."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "SET_MSG_EXPRESSION",
+            "person": { "person": "main.lea", "expression": "SURPRISED_TOWARD" }
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "AWAY" },
+            "message": { "en_US": "Ah, I see." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "AWAY" },
+            "message": { "en_US": "Anyways, thank you both for investigating for me." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.genius", "expression": "EXHAUSTED" },
+            "message": { "en_US": "I am currently too busy to do this myself, you see." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "PROUD" },
+            "message": { "en_US": "...!" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "SMILE" },
+            "message": { "en_US": "It is the least we can do." },
+            "type": "SHOW_MSG"
+          },
+          { "type": "CLEAR_MSG", "side": "ALL" },
+          { "type": "END_PRIVATE_MSG" },
+          {
+            "person": { "person": "main.lea", "expression": "DEFAULT" },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "DEFAULT" },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "THINKING" },
+            "message": { "en_US": "Should we return to Homestedt for now?" },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.sergey", "expression": "DOWN" },
+            "message": { "en_US": "There is not much else we can do here currently." },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": { "person": "main.lea", "expression": "NOD" },
+            "message": { "en_US": "[nods]" },
+            "type": "SHOW_MSG"
+          },
+          { "type": "CLEAR_MSG", "side": "ALL" },
+          {
+            "entity": { "player": true },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": { "x": 496, "y": 430, "z": 0, "lvl": 0 },
+                "precise": true
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": false
+          },
+          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 2 },
+          { "type": "TELEPORT", "map": "evo-village.center" },
+          {
+            "type": "IF",
+            "condition": "false",
+            "thenStep": [
+              {
+                "name": "This is just kept for posterity. Might use it in the future if we want to spice up the cutscene?",
+                "type": "LABEL"
+              },
+              {
+                "zoom": 1.5,
+                "transition": "EASE_IN_STRONG",
+                "type": "SET_CAMERA_ZOOM",
+                "duration": 0.2
+              },
+              {
+                "entity": { "player": true },
+                "action": [
+                  { "type": "SET_RELATIVE_SPEED", "value": 1 },
+                  {
+                    "type": "NAVIGATE_TO_POINT",
+                    "target": { "x": 495, "y": 178, "z": 0, "lvl": 0 },
+                    "precise": false,
+                    "maxTime": 0,
+                    "distance": 0
+                  },
+                  { "type": "JUMP", "jumpHeight": "M", "wait": true }
+                ],
+                "type": "DO_ACTION",
+                "wait": true
+              },
+              {
+                "type": "RUMBLE_SCREEN",
+                "rumbleType": "RANDOM",
+                "duration": 0.5,
+                "power": "STRONGER",
+                "speed": "FASTER",
+                "fade": true
+              },
+              {
+                "person": { "person": "main.lea", "expression": "SHOUT" },
+                "type": "ADD_MSG_PERSON",
+                "side": "RIGHT"
+              },
+              {
+                "person": { "person": "main.lea", "expression": "SHOUT" },
+                "message": { "en_US": "LEA!!!" },
+                "type": "SHOW_MSG"
+              },
+              {
+                "type": "CHANGE_VAR_NUMBER",
+                "varName": "plot.projred.line",
+                "changeType": "set",
+                "value": 500
+              }
+            ]
+          }
+        ],
+        "startCondition": "plot.projred.line >= 400",
+        "endCondition": "plot.projred.line >= 500",
+        "eventType": "CUTSCENE",
+        "triggerType": "ALWAYS",
+        "name": "PREnter"
+      }
+    },
+    {
+      "type": "Note",
+      "x": 232,
+      "y": 460,
+      "level": 1,
+      "settings": {
+        "mapId": 297,
+        "size": { "x": 120, "y": 17 },
+        "name": "TODO: Swap out some camera stuff",
+        "text": "Instead of walking up to the hidden entrance and focusing the camera on it, have Lea stand in the middle for a bit and pan the camera around to show the fixed exterior to fit in with Sergey's comment."
+      }
+    },
+    {
       "type": "Prop",
       "x": -44,
       "y": 408,
@@ -5276,147 +5669,6 @@
       "y": 400,
       "level": 1,
       "settings": { "mapId": 272, "__GLOBAL__": "forest-bamboo-1" }
-    },
-    {
-      "type": "EventTrigger",
-      "x": 253,
-      "y": 435,
-      "level": 1,
-      "settings": {
-        "mapId": 296,
-        "event": [
-          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 0 },
-          {
-            "entity": { "player": true },
-            "action": [
-              {
-                "type": "NAVIGATE_TO_POINT",
-                "maxTime": 0,
-                "distance": 0,
-                "target": { "x": 288, "y": 512, "lvl": "1" }
-              },
-              {
-                "type": "NAVIGATE_TO_POINT",
-                "maxTime": 0,
-                "distance": 0,
-                "target": { "x": 464, "y": 416, "lvl": "1" }
-              },
-              {
-                "type": "NAVIGATE_TO_POINT",
-                "maxTime": 0,
-                "distance": 0,
-                "target": { "x": 488, "y": 368, "lvl": "1" }
-              },
-              {
-                "type": "NAVIGATE_TO_POINT",
-                "maxTime": 0,
-                "distance": 0,
-                "target": { "x": 496, "y": 336, "lvl": "1" }
-              },
-              { "type": "SET_RELATIVE_SPEED", "value": 0.5 },
-              {
-                "type": "NAVIGATE_TO_POINT",
-                "maxTime": 0,
-                "distance": 0,
-                "target": { "x": 496, "y": 256, "lvl": "1" },
-                "precise": true
-              }
-            ],
-            "type": "DO_ACTION"
-          },
-          { "overMessage": false, "type": "SET_OVERLAY", "color": "black", "alpha": 0, "time": 3 },
-          {
-            "pos": { "x": 496, "y": 368 },
-            "speed": "SLOW",
-            "transition": "EASE_OUT",
-            "type": "SET_CAMERA_POS",
-            "wait": true,
-            "waitSkip": 0,
-            "zoom": 1
-          },
-          {
-            "pos": { "x": 496, "y": 160 },
-            "speed": "SLOW",
-            "transition": "EASE_IN_OUT",
-            "type": "SET_CAMERA_POS",
-            "wait": true,
-            "waitSkip": 0,
-            "zoom": 1
-          },
-          {
-            "person": { "person": "main.sergey", "expression": "SURPRISED" },
-            "type": "ADD_MSG_PERSON",
-            "side": "LEFT"
-          },
-          {
-            "person": { "person": "main.lea", "expression": "SURPRISED" },
-            "type": "ADD_MSG_PERSON",
-            "side": "RIGHT"
-          },
-          {
-            "person": { "person": "main.lea", "expression": "SURPRISED" },
-            "message": { "en_US": "...!" },
-            "type": "SHOW_MSG"
-          },
-          {
-            "person": { "expression": "SURPRISED", "person": "main.sergey" },
-            "message": { "en_US": "They fixed up the exterior...?" },
-            "type": "SHOW_MSG"
-          },
-          { "type": "CLEAR_MSG", "side": "ALL" },
-          {
-            "entity": { "player": true },
-            "action": [
-              {
-                "type": "MOVE_TO_POINT",
-                "target": { "x": 495, "y": 153, "z": 0, "lvl": 0 },
-                "precise": true
-              },
-              { "type": "JUMP", "jumpHeight": "S", "wait": true },
-              { "type": "JUMP", "jumpHeight": "S" }
-            ],
-            "type": "DO_ACTION",
-            "wait": true
-          },
-          {
-            "zoom": 1.5,
-            "transition": "EASE_IN_STRONG",
-            "type": "SET_CAMERA_ZOOM",
-            "duration": 0.2
-          },
-          {
-            "type": "RUMBLE_SCREEN",
-            "rumbleType": "RANDOM",
-            "duration": 0.5,
-            "power": "STRONG",
-            "speed": "FAST"
-          },
-          { "type": "WAIT", "time": 2 },
-          {
-            "type": "CHANGE_VAR_NUMBER",
-            "varName": "plot.projred.line",
-            "changeType": "set",
-            "value": 500
-          }
-        ],
-        "startCondition": "plot.projred.line >= 400",
-        "endCondition": "plot.projred.line >= 500",
-        "eventType": "CUTSCENE",
-        "triggerType": "ALWAYS",
-        "name": "PREnter"
-      }
-    },
-    {
-      "type": "Note",
-      "x": 232,
-      "y": 460,
-      "level": 1,
-      "settings": {
-        "mapId": 297,
-        "size": { "x": 120, "y": 17 },
-        "name": "TODO: Swap out some camera stuff",
-        "text": "Instead of walking up to the hidden entrance and focusing the camera on it, have Lea stand in the middle for a bit and pan the camera around to show the fixed exterior to fit in with Sergey's comment."
-      }
     }
   ],
   "layer": [
