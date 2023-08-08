@@ -2821,7 +2821,7 @@
             "zoom": 1,
             "type": "SET_CAMERA_TARGET",
             "entity": { "player": true },
-            "wait": true
+            "wait": false
           },
           {
             "person": { "person": "main.sergey", "expression": "SURPRISED" },
@@ -2861,7 +2861,7 @@
           },
           {
             "person": { "person": "main.sergey", "expression": "WHISTLING" },
-            "message": { "en_US": "Let us report back to Satoshi for now." },
+            "message": { "en_US": "Let us report back to him for now." },
             "type": "SHOW_MSG"
           },
           { "type": "CLEAR_MSG", "side": "ALL" },
@@ -2946,7 +2946,7 @@
           },
           {
             "person": { "person": "main.genius", "expression": "AWAY" },
-            "message": { "en_US": "Anyways, thank you both for investigating for me." },
+            "message": { "en_US": "Anyways, thank you both for investigating this." },
             "type": "SHOW_MSG"
           },
           {
@@ -2992,19 +2992,38 @@
             "type": "SHOW_MSG"
           },
           { "type": "CLEAR_MSG", "side": "ALL" },
+          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 1 },
           {
             "entity": { "player": true },
             "action": [
               {
-                "type": "MOVE_TO_POINT",
-                "target": { "x": 496, "y": 430, "z": 0, "lvl": 0 },
-                "precise": true
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 496, "y": 336, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 488, "y": 368, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 464, "y": 416, "lvl": "1" }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "maxTime": 0,
+                "distance": 0,
+                "target": { "x": 288, "y": 512, "lvl": "1" }
               }
             ],
-            "type": "DO_ACTION",
-            "wait": false
+            "type": "DO_ACTION"
           },
-          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 2 },
+          { "type": "WAIT", "time": 0.5 },
           { "type": "TELEPORT", "map": "evo-village.center" },
           {
             "type": "IF",
