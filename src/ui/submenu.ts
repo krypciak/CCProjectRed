@@ -56,13 +56,13 @@ sc.ExploreMenu = sc.BaseMenu.extend({
     this.msgBox.setAlign(ig.GUI_ALIGN.X_CENTER, ig.GUI_ALIGN.Y_CENTER);
 
     // Textual content sizing
-    let text = new sc.TextGui(ig.lang.get('sc.gui.menu.explore.introduction'));
+    let text = new sc.TextGui(ig.lang.get('sc.gui.menu.project-red.introduction'));
     text.setAlign(ig.GUI_ALIGN.X_CENTER, ig.GUI_ALIGN.Y_TOP);
     text.setTextAlign(ig.Font.ALIGN.CENTER);
 
     // Create the buttons and assign their invocation callbacks
-    let startButton = new sc.ButtonGui(ig.lang.get('sc.gui.menu.explore.buttons.start'));
-    let githubButton = new sc.ButtonGui(ig.lang.get('sc.gui.menu.explore.buttons.github'));
+    let startButton = new sc.ButtonGui(ig.lang.get('sc.gui.menu.project-red.buttons.start'));
+    let githubButton = new sc.ButtonGui(ig.lang.get('sc.gui.menu.project-red.buttons.github'));
     startButton.onButtonPress = this.onBeginButtonPress;
     githubButton.onButtonPress = this.onGitButtonPress;
 
@@ -123,7 +123,7 @@ sc.ExploreMenu = sc.BaseMenu.extend({
 
   onGitButtonPress() {
     // Open the GitHub page in the default browser
-    nw.Shell.openExternal('https://github.com/lexisother/CC-Explore/issues');
+    nw.Shell.openExternal('https://github.com/lexisother/CCProjectRed/issues');
   },
 
   // Stub
@@ -134,5 +134,5 @@ sc.ExploreMenu = sc.BaseMenu.extend({
 sc.MENU_SUBMENU.EXPLORE = Math.max(...Object.values(sc.MENU_SUBMENU)) + 1;
 sc.SUB_MENU_INFO[sc.MENU_SUBMENU.EXPLORE] = {
   Clazz: sc.ExploreMenu,
-  name: 'explore',
+  name: 'project-red',
 };
