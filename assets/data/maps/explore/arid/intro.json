@@ -62,6 +62,8 @@
             "waitSkip": 0,
             "zoom": 1.5
           },
+          { "type": "SET_PLAYER_SP_LEVEL", "level": "4" },
+          { "type": "SET_PLAYER_LEVEL_DEBUG", "level": 70 },
           { "type": "WAIT", "time": 0.2 },
           {
             "type": "PLAY_SOUND",
@@ -506,7 +508,6 @@
                     "type": "SHOW_ANIMATION",
                     "anim": "chairIdle"
                   },
-
                   { "type": "WAIT", "time": 0.5 }
                 ],
                 "elseStep": [
