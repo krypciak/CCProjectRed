@@ -1,4 +1,5 @@
 [
+  // Exit to the south of Homestedt
   {
     "type": "ENTER",
     "index": ["entities", 4, "settings"]
@@ -76,10 +77,12 @@
       ]
     }
   },
+  // <- entities
   {
     "type": "EXIT",
     "count": 3
   },
+  // C'tron's door, would otherwise prompt to re-enter the Evotarground
   {
     "type": "ENTER",
     "index": [46, "settings"]

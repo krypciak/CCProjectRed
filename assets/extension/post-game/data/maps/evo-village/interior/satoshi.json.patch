@@ -1,4 +1,5 @@
 [
+  // Extra state for Satoshi to trigger the new cutscene
   {
     "type": "ENTER",
     "index": ["entities", 94, "settings", "npcStates"]
@@ -158,10 +159,12 @@
       ]
     }
   },
+  // <- entities
   {
     "type": "EXIT",
     "count": 3
   },
+  // Pillow for Lea to sit on
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
@@ -181,6 +184,7 @@
       }
     }
   },
+  // Main cutscene
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
@@ -198,6 +202,7 @@
             "alpha": 1,
             "time": 0
           },
+          // spawn the magic pillow
           {
             "type": "CHANGE_VAR_BOOL",
             "varName": "tmp.pillowThere",

@@ -1,4 +1,6 @@
 [
+  // It seems that there isn't a very good way to flip animations dynamically,
+  // so I am forced to add a flipped variant myself.
   {
     "type": "ENTER",
     "index": ["SUB", 1, "SUB"]
