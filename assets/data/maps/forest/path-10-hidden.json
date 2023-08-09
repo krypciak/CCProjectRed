@@ -2992,7 +2992,6 @@
             "type": "SHOW_MSG"
           },
           { "type": "CLEAR_MSG", "side": "ALL" },
-          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 1 },
           {
             "entity": { "player": true },
             "action": [
@@ -3023,7 +3022,21 @@
             ],
             "type": "DO_ACTION"
           },
-          { "type": "WAIT", "time": 0.5 },
+          { "overMessage": true, "type": "SET_OVERLAY", "color": "black", "alpha": 1, "time": 1 },
+          { "type": "WAIT", "time": 1 },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "map.barrierOpenHideout",
+            "changeType": "set",
+            "value": false,
+            "map": "forest.path-10"
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.projred.line",
+            "changeType": "set",
+            "value": 500
+          },
           { "type": "TELEPORT", "map": "evo-village.center" },
           {
             "type": "IF",
