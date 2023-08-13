@@ -164,6 +164,209 @@
     "type": "EXIT",
     "count": 3
   },
+  // Extra state for Shizuka
+  {
+    "type": "ENTER",
+    "index": [96, "settings", "npcStates"]
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "reactType": "FIXED_POS",
+      "position": {
+        "x": 548,
+        "y": 475,
+        "lvl": 0
+      },
+      "face": "SOUTH",
+      "action": [],
+      "hidden": false,
+      "condition": "plot.projred.line >= 500 && plot.projred.line <= 600",
+      "config": "normal",
+      "event": [
+        {
+          "entity": {
+            "player": true
+          },
+          "action": [
+            {
+              "type": "SET_RELATIVE_SPEED",
+              "value": 0.5
+            },
+            {
+              "type": "NAVIGATE_TO_POINT",
+              "target": {
+                "x": 548,
+                "y": 500,
+                "z": 0,
+                "lvl": 0
+              },
+              "precise": true
+            },
+            {
+              "type": "SET_FACE",
+              "face": "NORTH",
+              "rotate": true,
+              "rotateSpeed": 2
+            }
+          ],
+          "type": "DO_ACTION",
+          "wait": true
+        },
+        {
+          "entity": {
+            "global": true,
+            "name": "shizuka"
+          },
+          "action": [
+            {
+              "type": "SET_FACE",
+              "rotateSpeed": 2,
+              "rotate": true,
+              "face": "SOUTH"
+            }
+          ],
+          "type": "DO_ACTION"
+        },
+        {
+          "person": {
+            "person": "main.lea",
+            "expression": "DEFAULT"
+          },
+          "type": "ADD_MSG_PERSON",
+          "side": "RIGHT"
+        },
+        {
+          "person": {
+            "person": "main.shizuka",
+            "expression": "BRIGHT"
+          },
+          "type": "ADD_MSG_PERSON",
+          "side": "LEFT"
+        },
+        {
+          "person": {
+            "person": "main.shizuka",
+            "expression": "BRIGHT"
+          },
+          "message": {
+            "en_US": "Hi Lea!"
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "person": {
+            "person": "main.lea",
+            "expression": "EXCITED"
+          },
+          "message": {
+            "en_US": "Hi!"
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "type": "SET_MSG_EXPRESSION",
+          "person": {
+            "person": "main.lea",
+            "expression": "DEFAULT"
+          }
+        },
+        {
+          "person": {
+            "person": "main.shizuka",
+            "expression": "DEFAULT"
+          },
+          "message": {
+            "en_US": "Satoshi said he wanted to talk with the both of us, so I decided I'd wait for you."
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "person": {
+            "person": "main.shizuka",
+            "expression": "DEFAULT"
+          },
+          "message": {
+            "en_US": "Should we head inside?"
+          },
+          "type": "SHOW_MSG"
+        },
+        {
+          "0": [
+            {
+              "person": {
+                "person": "main.lea",
+                "expression": "NOD"
+              },
+              "message": {
+                "en_US": "[nods]"
+              },
+              "type": "SHOW_MSG"
+            },
+            {
+              "person": {
+                "person": "main.shizuka",
+                "expression": "TOWARD"
+              },
+              "message": {
+                "en_US": "Alright, let's see what he has to say."
+              },
+              "type": "SHOW_MSG"
+            },
+            {
+              "type": "CHANGE_VAR_NUMBER",
+              "varName": "plot.projred.line",
+              "changeType": "set",
+              "value": 550
+            }
+          ],
+          "1": [
+            {
+              "person": {
+                "person": "main.lea",
+                "expression": "SHAKE"
+              },
+              "message": {
+                "en_US": "[shakes head]"
+              },
+              "type": "SHOW_MSG"
+            },
+            {
+              "person": {
+                "person": "main.shizuka",
+                "expression": "EVIL_GRIN"
+              },
+              "message": {
+                "en_US": "Alright, but don't keep me waiting too long."
+              },
+              "type": "SHOW_MSG"
+            }
+          ],
+          "type": "SHOW_CHOICE",
+          "person": {
+            "person": "main.lea",
+            "expression": "DEFAULT"
+          },
+          "options": [
+            {
+              "label": {
+                "en_US": "[yes]"
+              }
+            },
+            {
+              "label": {
+                "en_US": "[no]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "EXIT",
+    "count": 3
+  },
   // Pillow for Lea to sit on
   {
     "type": "ADD_ARRAY_ELEMENT",
@@ -184,7 +387,7 @@
       }
     }
   },
-  // Main cutscene
+  // Explanation intro cutscene
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
@@ -723,6 +926,208 @@
         "endCondition": "plot.projred.line >= 250",
         "triggerType": "ALWAYS",
         "eventType": "CUTSCENE"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "EventTrigger",
+      "x": 645,
+      "y": 256,
+      "level": 0,
+      "settings": {
+        "size": {
+          "x": 16,
+          "y": 16
+        },
+        "mapId": 118,
+        "event": [
+          {
+            "entity": {
+              "global": true,
+              "name": "shizuka"
+            },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 527,
+                  "y": 465,
+                  "z": 0,
+                  "lvl": 0
+                }
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 527,
+                  "y": 465,
+                  "z": 0,
+                  "lvl": 0
+                }
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "shizuka"
+            },
+            "action": [
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 527,
+                  "y": 431,
+                  "z": 0,
+                  "lvl": 0
+                }
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 544,
+                  "y": 416,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "NORTH",
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION"
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 527,
+                  "y": 431,
+                  "z": 0,
+                  "lvl": 0
+                }
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 512,
+                  "y": 416,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": true
+              },
+              {
+                "type": "SET_FACE",
+                "face": "NORTH",
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "BADASS"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "BADASS"
+            },
+            "message": {
+              "en_US": "This comes from the cutscene"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CHANGE_VAR_NUMBER",
+            "varName": "plot.projred.line",
+            "changeType": "set",
+            "value": 600
+          },
+          {
+            "type": "IF",
+            "condition": "false",
+            "thenStep": [
+              {
+                "entity": {
+                  "global": true,
+                  "name": "shizuka"
+                },
+                "action": [
+                  {
+                    "type": "MOVE_TO_POINT",
+                    "target": {
+                      "x": 527,
+                      "y": 465,
+                      "z": 0,
+                      "lvl": 0
+                    }
+                  },
+                  {
+                    "type": "MOVE_TO_POINT",
+                    "target": {
+                      "x": 527,
+                      "y": 431,
+                      "z": 0,
+                      "lvl": 0
+                    }
+                  },
+                  {
+                    "type": "MOVE_TO_POINT",
+                    "target": {
+                      "x": 544,
+                      "y": 416,
+                      "z": 0,
+                      "lvl": 0
+                    }
+                  }
+                ],
+                "type": "DO_ACTION"
+              }
+            ]
+          }
+        ],
+        "name": "PRDiscuss",
+        "eventType": "CUTSCENE",
+        "startCondition": "plot.projred.line >= 550",
+        "endCondition": "plot.projred.line >= 600",
+        "triggerType": "ALWAYS"
       }
     }
   }
