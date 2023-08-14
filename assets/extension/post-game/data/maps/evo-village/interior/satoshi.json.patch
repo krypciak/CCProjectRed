@@ -1175,6 +1175,10 @@
             "type": "SHOW_MSG"
           },
           {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
             "name": "Getting up",
             "type": "LABEL"
           },
@@ -1295,17 +1299,165 @@
           },
           {
             "person": {
+              "person": "main.genius",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
               "person": "main.shizuka",
               "expression": "DEFAULT"
             },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "type": "IF",
+            "condition": "false",
+            "thenStep": [
+              {
+                "person": {
+                  "person": "main.genius",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": ""
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.shizuka",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": ""
+                },
+                "type": "SHOW_MSG"
+              },
+              {
+                "person": {
+                  "person": "main.lea",
+                  "expression": "DEFAULT"
+                },
+                "message": {
+                  "en_US": ""
+                },
+                "type": "SHOW_MSG"
+              }
+            ]
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "DEFAULT"
+            },
             "message": {
-              "en_US": "This comes from the cutscene"
+              "en_US": "I am glad you could both make it at this hour."
             },
             "type": "SHOW_MSG"
           },
           {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "FUNNY_SMILE"
+            },
+            "message": {
+              "en_US": "Of course, it's not like I had anything to do today."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "DOWN"
+            },
+            "message": {
+              "en_US": "I have a favor to ask of you two."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "ASKING"
+            },
+            "message": {
+              "en_US": "Would you be interested in playtesting the new area?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "CONCERNED"
+            },
+            "message": {
+              "en_US": "For a moment I was hoping you were making some sick joke..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "CONCERNED"
+            },
+            "message": {
+              "en_US": "They are actually going to release it?"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "EXHAUSTED"
+            },
+            "message": {
+              "en_US": "I am afraid so. Despite my complaints, Instatainment wanted to push through."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "NERVOUS"
+            },
+            "message": {
+              "en_US": "..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
             "name": "Spawn teleporters with remote",
             "type": "LABEL"
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "waitSkip": 0,
+            "zoom": 1.5,
+            "type": "SET_CAMERA_TARGET",
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "wait": true
           },
           {
             "entity": {
@@ -1346,6 +1498,17 @@
             "time": 0.3
           },
           {
+            "pos": {
+              "x": 527,
+              "y": 355
+            },
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 1.2,
+            "wait": true
+          },
+          {
             "name": "Xenon, can you figure out why this brings Satoshi back to his sitting pose? I am sure it has something to do with the fact that his initial config in PRD is set to the typing anim but I would like to stop him from doing that so I can SHOW and CLEAR animations.",
             "type": "LABEL"
           },
@@ -1368,14 +1531,309 @@
             "value": true
           },
           {
+            "type": "WAIT",
+            "time": 0.3
+          },
+          {
+            "pos": {
+              "x": 528,
+              "y": 375
+            },
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 1.5,
+            "wait": true
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
             "person": {
               "person": "main.shizuka",
               "expression": "DEFAULT"
             },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "DEFAULT"
+            },
             "message": {
-              "en_US": "This comes from the cutscene"
+              "en_US": "I was planning to send the both of you over there."
             },
             "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "AWAY"
+            },
+            "message": {
+              "en_US": "There is currently a barricade blocking the area off, but these teleporters will bring you past them."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "SARCASTIC"
+            },
+            "message": {
+              "en_US": "You really like being persuasive, huh."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "EXHAUSTED"
+            },
+            "message": {
+              "en_US": "Please, just see it as something new to enjoy. We can discuss your concerns later, Shizuka."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.lea",
+              "expression": "PROUD"
+            },
+            "message": {
+              "en_US": "...!"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "DENYING"
+            },
+            "message": {
+              "en_US": "Alright, fine..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "BADASS"
+            },
+            "message": {
+              "en_US": "Let's go, Lea."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "type": "CLEAR_MSG",
+            "side": "ALL"
+          },
+          {
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "waitSkip": 0,
+            "zoom": 1.2,
+            "type": "SET_CAMERA_TARGET",
+            "entity": {
+              "player": true
+            }
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 464,
+                  "y": 399,
+                  "z": 0,
+                  "lvl": 0
+                },
+                "precise": false
+              },
+              {
+                "type": "NAVIGATE_TO_ENTITY",
+                "precise": true,
+                "entity": {
+                  "global": true,
+                  "name": "leaTp"
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "face": "SOUTH",
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": false
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "shizuka"
+            },
+            "action": [
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+              },
+              {
+                "type": "NAVIGATE_TO_POINT",
+                "target": {
+                  "x": 591,
+                  "y": 399,
+                  "z": 0,
+                  "lvl": 0
+                }
+              },
+              {
+                "type": "NAVIGATE_TO_ENTITY",
+                "precise": true,
+                "entity": {
+                  "global": true,
+                  "name": "shizuTp"
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "face": "SOUTH",
+                "rotate": true,
+                "rotateSpeed": 3
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": true
+          },
+          {
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "BADASS"
+            },
+            "message": {
+              "en_US": "All ready!"
+            },
+            "type": "SHOW_SIDE_MSG"
+          },
+          {
+            "type": "WAIT",
+            "time": 0.4
+          },
+          {
+            "entity": {
+              "player": true
+            },
+            "duration": 0,
+            "align": "BOTTOM",
+            "group": "",
+            "wait": false,
+            "waitSkip": 0,
+            "effect": {
+              "sheet": "teleport",
+              "name": "hideSlow"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "shizuka"
+            },
+            "duration": 0,
+            "align": "BOTTOM",
+            "group": "",
+            "wait": false,
+            "waitSkip": 0,
+            "effect": {
+              "sheet": "teleport",
+              "name": "hideSlow"
+            },
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "type": "SHOW_EFFECT"
+          },
+          {
+            "type": "WAIT",
+            "time": 0.2
+          },
+          {
+            "zoom": 3,
+            "transition": "EASE_IN",
+            "type": "SET_CAMERA_ZOOM",
+            "duration": 4
+          },
+          {
+            "name": "Here is another bug... the two bars that appear when a cutscene is ongoing randomly disappear without a transition when the second SET_OVERLAY is called",
+            "type": "LABEL"
+          },
+          {
+            "overMessage": false,
+            "type": "SET_OVERLAY",
+            "color": "white",
+            "alpha": 1,
+            "time": 3,
+            "lighter": true
+          },
+          {
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT",
+            "fadeIn": 0.5,
+            "duration": 4,
+            "fadeOut": 1
+          },
+          {
+            "type": "WAIT",
+            "time": 4
+          },
+          {
+            "overMessage": true,
+            "type": "SET_OVERLAY",
+            "color": "black",
+            "alpha": 1,
+            "time": 2,
+            "lighter": false
+          },
+          {
+            "type": "WAIT",
+            "time": 2
           },
           {
             "type": "CHANGE_VAR_NUMBER",
@@ -1384,51 +1842,8 @@
             "value": 600
           },
           {
-            "type": "IF",
-            "condition": "false",
-            "thenStep": [
-              {
-                "entity": {
-                  "player": true
-                },
-                "duration": 0,
-                "align": "BOTTOM",
-                "group": "",
-                "wait": false,
-                "waitSkip": 0,
-                "effect": {
-                  "sheet": "teleport",
-                  "name": "hideSlow"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "type": "SHOW_EFFECT"
-              },
-              {
-                "entity": {
-                  "global": true,
-                  "name": "shizuka"
-                },
-                "duration": 0,
-                "align": "BOTTOM",
-                "group": "",
-                "wait": false,
-                "waitSkip": 0,
-                "effect": {
-                  "sheet": "teleport",
-                  "name": "hideSlow"
-                },
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "type": "SHOW_EFFECT"
-              }
-            ]
+            "type": "TELEPORT",
+            "map": "forest.path-10"
           }
         ],
         "name": "PRDiscuss",
