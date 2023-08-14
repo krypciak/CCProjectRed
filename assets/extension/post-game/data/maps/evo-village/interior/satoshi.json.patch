@@ -1002,6 +1002,7 @@
       }
     }
   },
+  // Discussion intro cutscene
   {
     "type": "ADD_ARRAY_ELEMENT",
     "content": {
@@ -1034,6 +1035,16 @@
             ],
             "type": "DO_ACTION",
             "wait": true
+          },
+          {
+            "pos": {
+              "x": 528,
+              "y": 375
+            },
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_POS",
+            "zoom": 1.2
           },
           {
             "entity": {
@@ -1131,16 +1142,235 @@
           },
           {
             "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "LEFT"
+          },
+          {
+            "person": {
               "person": "main.shizuka",
-              "expression": "BADASS"
+              "expression": "DEFAULT"
             },
             "type": "ADD_MSG_PERSON",
             "side": "RIGHT"
           },
           {
             "person": {
+              "person": "main.lea",
+              "expression": "DEFAULT"
+            },
+            "type": "ADD_MSG_PERSON",
+            "side": "RIGHT"
+          },
+          {
+            "person": {
+              "person": "main.genius",
+              "expression": "CHAIR_DEFAULT"
+            },
+            "message": {
+              "en_US": "Sisters..."
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "name": "Getting up",
+            "type": "LABEL"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "action": [
+              {
+                "type": "SET_SLIP_THROUGH",
+                "value": true
+              },
+              {
+                "type": "SHOW_ANIMATION",
+                "anim": "chairGetUp"
+              },
+              {
+                "type": "WAIT",
+                "time": 1.2
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": true
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.satoshiChair2",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "action": [
+              {
+                "type": "SET_SLIP_THROUGH",
+                "value": true
+              },
+              {
+                "type": "SET_WALK_ANIMS",
+                "config": "normal"
+              },
+              {
+                "type": "CLEAR_ANIMATION"
+              },
+              {
+                "type": "SET_POS",
+                "newPos": {
+                  "x": 520,
+                  "y": 360,
+                  "lvl": 0
+                }
+              },
+              {
+                "type": "SET_FACE",
+                "face": "SOUTH",
+                "rotateSpeed": 3
+              },
+              {
+                "type": "WAIT",
+                "time": 0.4
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": true
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "action": [
+              {
+                "type": "ADD_SLOW_MOTION",
+                "factor": 0.5,
+                "time": 0
+              },
+              {
+                "type": "SET_WALK_ANIMS",
+                "config": "normal"
+              },
+              {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.4
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 520,
+                  "y": 375,
+                  "lvl": 0
+                },
+                "precise": false
+              },
+              {
+                "type": "MOVE_TO_POINT",
+                "target": {
+                  "x": 528,
+                  "y": 381,
+                  "lvl": 0
+                },
+                "precise": true
+              },
+              {
+                "type": "SET_FACE",
+                "rotateSpeed": 3,
+                "face": "SOUTH"
+              }
+            ],
+            "type": "DO_ACTION",
+            "keepState": true,
+            "wait": true
+          },
+          {
+            "person": {
               "person": "main.shizuka",
-              "expression": "BADASS"
+              "expression": "DEFAULT"
+            },
+            "message": {
+              "en_US": "This comes from the cutscene"
+            },
+            "type": "SHOW_MSG"
+          },
+          {
+            "name": "Spawn teleporters with remote",
+            "type": "LABEL"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "action": [
+              {
+                "type": "SHOW_ANIMATION",
+                "anim": "handheld"
+              },
+              {
+                "type": "WAIT",
+                "time": 1
+              },
+              {
+                "type": "SHOW_ANIMATION",
+                "anim": "handheldStop"
+              }
+            ],
+            "type": "DO_ACTION",
+            "wait": true,
+            "keepState": true
+          },
+          {
+            "type": "PLAY_SOUND",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "volume": 1,
+            "sound": "media/sound/misc/computer-beep-success.ogg",
+            "offset": 0,
+            "startTime": 0
+          },
+          {
+            "type": "WAIT",
+            "time": 0.3
+          },
+          {
+            "name": "Xenon, can you figure out why this brings Satoshi back to his sitting pose? I am sure it has something to do with the fact that his initial config in PRD is set to the typing anim but I would like to stop him from doing that so I can SHOW and CLEAR animations.",
+            "type": "LABEL"
+          },
+          {
+            "entity": {
+              "global": true,
+              "name": "satoshi"
+            },
+            "action": [
+              {
+                "type": "CLEAR_ANIMATION"
+              }
+            ],
+            "type": "DO_ACTION"
+          },
+          {
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "tmp.teleporterThere",
+            "changeType": "set",
+            "value": true
+          },
+          {
+            "person": {
+              "person": "main.shizuka",
+              "expression": "DEFAULT"
             },
             "message": {
               "en_US": "This comes from the cutscene"
@@ -1159,39 +1389,44 @@
             "thenStep": [
               {
                 "entity": {
+                  "player": true
+                },
+                "duration": 0,
+                "align": "BOTTOM",
+                "group": "",
+                "wait": false,
+                "waitSkip": 0,
+                "effect": {
+                  "sheet": "teleport",
+                  "name": "hideSlow"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "type": "SHOW_EFFECT"
+              },
+              {
+                "entity": {
                   "global": true,
                   "name": "shizuka"
                 },
-                "action": [
-                  {
-                    "type": "MOVE_TO_POINT",
-                    "target": {
-                      "x": 527,
-                      "y": 465,
-                      "z": 0,
-                      "lvl": 0
-                    }
-                  },
-                  {
-                    "type": "MOVE_TO_POINT",
-                    "target": {
-                      "x": 527,
-                      "y": 431,
-                      "z": 0,
-                      "lvl": 0
-                    }
-                  },
-                  {
-                    "type": "MOVE_TO_POINT",
-                    "target": {
-                      "x": 544,
-                      "y": 416,
-                      "z": 0,
-                      "lvl": 0
-                    }
-                  }
-                ],
-                "type": "DO_ACTION"
+                "duration": 0,
+                "align": "BOTTOM",
+                "group": "",
+                "wait": false,
+                "waitSkip": 0,
+                "effect": {
+                  "sheet": "teleport",
+                  "name": "hideSlow"
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "type": "SHOW_EFFECT"
               }
             ]
           }
