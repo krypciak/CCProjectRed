@@ -1,0 +1,11 @@
+#+title: Project Red TODO List
+#+date: 2023-07-14
+
+⊙ ~forest/path-10~
+ ⊘ TODO Block off entrance with rocks
+ ⊘ TODO Adjust cutscene to let Satoshi clear up confusion
+
+⊙ ~evo-village/interior/satoshi~
+ ⊘ TODO Implement most dialogue
+ ⊘ TODO Fix Satoshi's weird positioning during standing up
+ ⊘ TODO Fix Lea hitting the wall when walking into Satoshi's office
