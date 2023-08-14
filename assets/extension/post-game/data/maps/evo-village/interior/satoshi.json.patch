@@ -400,6 +400,66 @@
       }
     }
   },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "TeleportField",
+      "x": 451,
+      "y": 307,
+      "level": 0,
+      "settings": {
+        "size": {
+          "x": 16,
+          "y": 16
+        },
+        "mapId": 120,
+        "name": "leaTp",
+        "dir": "SOUTH",
+        "gfxType": "AR",
+        "spawnCondition": "tmp.teleporterThere"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "TeleportField",
+      "x": 579,
+      "y": 307,
+      "level": 0,
+      "settings": {
+        "size": {
+          "x": 16,
+          "y": 16
+        },
+        "mapId": 119,
+        "name": "shizuTp",
+        "dir": "SOUTH",
+        "gfxType": "AR",
+        "spawnCondition": "tmp.teleporterThere"
+      }
+    }
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+      "type": "Prop",
+      "x": 527,
+      "y": 352,
+      "level": 0,
+      "settings": {
+        "name": "",
+        "propType": {
+          "sheet": "forest-interior",
+          "name": "chair-satoshi"
+        },
+        "propAnim": "",
+        "spawnCondition": "tmp.satoshiChair2",
+        "mapId": 121,
+        "condAnims": []
+      }
+    }
+  },
   // Explanation intro cutscene
   {
     "type": "ADD_ARRAY_ELEMENT",
