@@ -185,6 +185,19 @@
       "config": "normal",
       "event": [
         {
+          "offsetX": 0,
+          "offsetY": 0,
+          "speed": "NORMAL",
+          "transition": "EASE_IN_OUT",
+          "waitSkip": 0,
+          "zoom": 1,
+          "type": "SET_CAMERA_TARGET",
+          "entity": {
+            "global": true,
+            "name": "shizuka"
+          }
+        },
+        {
           "entity": {
             "player": true
           },
