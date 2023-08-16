@@ -39,6 +39,15 @@ sc.ExploreMenuButtonGui = ig.GuiElementBase.extend({
   },
 });
 
+
+let titleScreenButtonGuiInstance: sc.TitleScreenButtonGui
+sc.TitleScreenButtonGui.inject({
+  init() {
+    titleScreenButtonGuiInstance = this
+    return this.parent();
+  },
+});
+
 sc.ExploreMenu = sc.BaseMenu.extend({
   buttons: null,
   init() {
@@ -59,6 +68,7 @@ sc.ExploreMenu = sc.BaseMenu.extend({
     let text = new sc.TextGui(ig.lang.get('sc.gui.menu.project-red.introduction'));
     text.setAlign(ig.GUI_ALIGN.X_CENTER, ig.GUI_ALIGN.Y_TOP);
     text.setTextAlign(ig.Font.ALIGN.CENTER);
+
 
     // Create the buttons and assign their invocation callbacks
     let startButton = new sc.ButtonGui(ig.lang.get('sc.gui.menu.project-red.buttons.start'));
@@ -119,6 +129,8 @@ sc.ExploreMenu = sc.BaseMenu.extend({
     ig.bgm.clear('MEDIUM_OUT');
     ig.game.start(sc.START_MODE.EXPLORE, 1);
     ig.game.setPaused(false);
+
+    ig.interact.removeEntry(titleScreenButtonGuiInstance.buttonInteract)
   },
 
   onGitButtonPress() {
